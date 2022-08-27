@@ -6,397 +6,1127 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 27 Aug 2022 06:56:11 GMT</pubDate>
-    <lastBuildDate>Sat, 27 Aug 2022 06:56:11 GMT</lastBuildDate>
+    <pubDate>Sat, 27 Aug 2022 07:19:29 GMT</pubDate>
+    <lastBuildDate>Sat, 27 Aug 2022 07:19:29 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <category>工具</category>
-    <category>自动化</category>
-    <category>系统</category>
-    <category>网络</category>
-    <category>服务器</category>
+    <category>CodeForces</category>
+    <category>IOI2022</category>
+    <category>NOIP2021</category>
+    <category>UOJ</category>
     <item>
-      <title>电脑上实现微信双开，无需网页版或第三方软件</title>
-      <link>https://newzone.top/_posts/2017-04-18-wechat_multi_open.html</link>
-      <guid>https://newzone.top/_posts/2017-04-18-wechat_multi_open.html</guid>
-      <source url="https://newzone.top/rss.xml">电脑上实现微信双开，无需网页版或第三方软件</source>
-      <category>工具</category>
-      <pubDate>Tue, 18 Apr 2017 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>由于工作原因，有时候我们需要在电脑上登录多个微信。但微信限制一个客户端只能登陆一个账号，PC 端 + 网页版就成了通用方案，操作效率下降许多。</p>
-<p>其实我们还有更好的办法。在微信 PC 版之余，同时安装微信 For Windows，就能实现客户端双开！</p>
-<h2 id="微信-for-windows-安装" tabindex="-1"> 微信 For Windows 安装</h2>
-<p>打开「运行」对话框，输入并启动「应用商店」或「Microsoft Store」，搜索并安装 <code>微信 For Windows</code>。</p>
-<p><img src="http://tc.seoipo.com/2022-05-06-04-21-30.png" alt="" loading="lazy"></p>
-<p>安装好后，就能与微信 PC 版一齐启动，互不干扰。</p>
-<p><img src="http://tc.seoipo.com/2022-05-06-04-21-40.png" alt="" loading="lazy"></p>
-<h2 id="开机启动两个微信" tabindex="-1"> 开机启动两个微信</h2>
-<p>找到系统启动文件夹，文件夹路径为：<code>%AppData%\Microsoft\Windows\Start Menu\Programs\Startup</code>。或者打开「运行」对话框，输入命令「shell:startup」，回车即可打开「启动文件夹」。</p>
-<p>将微信 for windows 10 的快捷方式放到「启动」文件夹里。</p>
-<p><img src="http://tc.seoipo.com/2022-05-06-04-23-49.png" alt="" loading="lazy"></p>
-<p>三开的话，可以在 Microsoft Store 上安装 微信 (UWP) 。</p>
-<p>如果还需要继续多开微信，可以参考 @刘舒怡 的方法：</p>
-<blockquote>
-<p>只要在 2 秒内快速连续双击打开软件，就能弹出很多登录界面，你想登多少个就登多少个</p>
-</blockquote>
-<p>另外，有人专门开发了微信/QQ 多开的补丁，需要四开以上的可以试试 <a href="https://github.com/huiyadanli/RevokeMsgPatcher" target="_blank" rel="noopener noreferrer">RevokeMsgPatcher</a>。</p>
-<p>但多开补丁风险未知，我只用了其中的防撤回功能，需谨慎使用多开补丁。</p>
-<p>国内搬运地址：<a href="https://wwz.lanzouf.com/ij0oz05ns3di" target="_blank" rel="noopener noreferrer">RevokeMsgPatcher.v1.5.zip</a></p>
-]]></content:encoded>
-      <enclosure url="http://tc.seoipo.com/2022-05-06-04-21-30.png" type="image/png"/>
-    </item>
-    <item>
-      <title>RSS 入门篇：Feed43&amp;FeedEx-为静态网页定制 RSS 源</title>
-      <link>https://newzone.top/_posts/2017-04-22-rss_feed43_feedex.html</link>
-      <guid>https://newzone.top/_posts/2017-04-22-rss_feed43_feedex.html</guid>
-      <source url="https://newzone.top/rss.xml">RSS 入门篇：Feed43&amp;FeedEx-为静态网页定制 RSS 源</source>
-      <category>自动化</category>
-      <pubDate>Sat, 22 Apr 2017 12:54:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>迷上 IFTTT 后急需 RSS 来监测网页，找到免费的 FEED43。网上有很多教程，但对新手都不够友好，就重新整理了一份。</p>
-<p><strong>► 开始烧制属于自己的 feed</strong></p>
-<h2 id="_1-进入网页" tabindex="-1"> 1. 进入网页</h2>
-<p><a href="http://www.feed43.com/" target="_blank" rel="noopener noreferrer">FEED43</a> 无需注册，点击 Create your own feed 直接使用。</p>
-<p><img src="https://pic1.zhimg.com/v2-b5da0b08f632376fad3925a779e373b4_r.jpg" alt="" loading="lazy"></p>
-<h2 id="_2-选定-rss-网页" tabindex="-1"> 2. 选定 RSS 网页</h2>
-<p>将目标网址添入 Step1. Specify source page address (URL)，将输入的源代码复制到 txt 文档中（方便之后写抓取规则）</p>
-<p><img src="https://pic1.zhimg.com/v2-1b687a5b1c325ba6d04fbdcc13b95668_r.jpg" alt="" loading="lazy"></p>
-<p>如果 Page Source 显示为乱码，Encoding 可设为 <strong>UTF-8</strong> 。</p>
-<h2 id="_3-定制-rss-抓取规则" tabindex="-1"> 3. 定制 RSS 抓取规则</h2>
-<p>Global Search Pattern 是选择你要搜索的范围。可以不填，这样会搜索整个页面，一般新手都选择整个页面，即空白。Item (repeatable) Search Pattern 这部分最重要，是我们要抓取的内容。</p>
-<p><img src="https://pic1.zhimg.com/v2-b1fa90c59739bddc0c27134cd36ba6bc_r.jpg" alt="" loading="lazy"></p>
-<p>仔细查看 Step1 中的源代码，找到区需要抓取的部分，输入到 Item (repeatable) Search Pattern。</p>
-<p>测试网址：<code>http://news.163.com/special/0001386F/rank_whole.html</code>。</p>
-<p>需要抓取的源代码：</p>
-<div><pre><code><span><span><span>&lt;</span>tr</span><span>></span></span>
-  <span><span><span>&lt;</span>td</span> <span>class</span><span><span>=</span><span>"</span>red<span>"</span></span><span>></span></span>
-    <span><span><span>&lt;</span>span</span><span>></span></span>2<span><span><span>&lt;/</span>span</span>
-    <span>></span></span><span><span><span>&lt;</span>a</span> <span>href</span><span><span>=</span><span>"</span>更时尚更运动 车展实拍解析红旗 H5<span>"</span></span>
-      <span>></span></span>更时尚更运动 车展实拍解析红旗 H5<span><span><span>&lt;/</span>a</span>
-    <span>></span></span>
-  <span><span><span>&lt;/</span>td</span><span>></span></span>
-  <span><span><span>&lt;</span>td</span> <span>class</span><span><span>=</span><span>"</span>cBlue<span>"</span></span><span>></span></span>11211615<span><span><span>&lt;/</span>td</span><span>></span></span>
-<span><span><span>&lt;/</span>tr</span><span>></span></span>
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p><img src="https://pic2.zhimg.com/v2-cf6dbf2c09189f7517ec63abdc80c50d_r.jpg" alt="" loading="lazy"></p>
-<p><strong>抓取规则</strong>：</p>
-<div><pre><code><span><span><span>&lt;</span>tr</span><span>></span></span>
-  {*}
-  <span><span><span>&lt;</span>td</span> <span>class</span><span><span>=</span><span>"</span>{*}<span>"</span></span><span>></span></span><span><span><span>&lt;</span>span</span><span>></span></span>{*}<span><span><span>&lt;/</span>span</span><span>></span></span><span><span><span>&lt;</span>a</span> <span>href</span><span><span>=</span><span>"</span>{%}<span>"</span></span><span>></span></span>{%}<span><span><span>&lt;/</span>a</span><span>></span></span><span><span><span>&lt;/</span>td</span><span>></span></span>
-  {*}
-  <span><span><span>&lt;</span>td</span> <span>class</span><span><span>=</span><span>"</span>cBlue<span>"</span></span><span>></span></span>{*}<span><span><span>&lt;/</span>td</span><span>></span></span>
-  {*}
-<span><span><span>&lt;/</span>tr</span><span>></span></span>
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>点击 Extract，进行抓取。</p>
-<p><img src="https://pic4.zhimg.com/v2-e9486741a6229ab258a95147f584571b_r.jpg" alt="" loading="lazy"></p>
-<h2 id="_4-整理-rss-输入格式" tabindex="-1"> 4. 整理 rss 输入格式</h2>
-<p>Define output format，一般情况下前面三个会已经写好，后三个就将前面得出的 item 里面的元素填入即可，我这里{%1}对应的是链接所以填入 Link，{%2}对于标题就填入 Title。</p>
-<p><img src="https://pic1.zhimg.com/v2-b4614f5c46090f2eb762aac87d604350_r.jpg" alt="" loading="lazy"></p>
-<p>然后点击 preview，完成制作，同时出现预览。</p>
-<p><img src="https://pic2.zhimg.com/v2-498bf1f1c0b14da172498b58f59e39b9_r.jpg" alt="" loading="lazy"></p>
-<p>如果注册了 FEED43 的账号，可以修改 rss 地址，但不能改为中文，否则会 rss 出错。</p>
-<h2 id="_5-获取-rss-地址" tabindex="-1"> 5. 获取 RSS 地址</h2>
-<p>点击 Feed URL 可得 rss 地址，我这里是 <a href="https://www.feed43.com/dianji.xml" target="_blank" rel="noopener noreferrer">https://www.feed43.com/dianji.xml</a></p>
-<p><img src="https://pic1.zhimg.com/v2-f3b00e876d8df136f7d354b4fc22f900_r.jpg" alt="" loading="lazy"></p>
-<p>在 RSS reader 中展示为</p>
-<p><img src="https://pic4.zhimg.com/v2-6d8f503ff3da16eb985ca1d3ae2de98f_r.jpg" alt="" loading="lazy"></p>
-<h2 id="_6-全文抓取" tabindex="-1"> 6. 全文抓取</h2>
-<p>feed43 导出的条目必须点击链接才能看到内容。在 rss 展示全文，需要通过 FeedEx 再转一次。注意：feed43 免费用户过多，<strong>需在浏览器中打开一次才能得到真实链接</strong> (一般为 <code>http://node2.feed43.com</code>)，FeedEx 需使用真实链接，一般 3 分钟内转换好。</p>
-<p>FeedEx：<a href="https://feedex.net/" target="_blank" rel="noopener noreferrer">https://feedex.net/</a></p>
-<p><img src="https://pic4.zhimg.com/v2-8e3701adffa1d6fb4ea10dda2704988b_r.jpg" alt="" loading="lazy"></p>
-<p>feeds43 免费版每 6 小时抓取一次，显示最新的 20 条内容。</p>
-<p>如果网页源更新较频繁的话，可使用 RSSHub 和 Huginn。</p>
-<h2 id="rss-合集" tabindex="-1"> RSS 合集</h2>
-<p>汇总的 RSS 永久订阅 feeds，均通过 RSSHub 和 Huginn 制作。如果有兴趣自制 RSS，可参考以下教程。</p>
+      <title>CF1188D</title>
+      <link>https://newzone.top/_posts/CF1188D.html</link>
+      <guid>https://newzone.top/_posts/CF1188D.html</guid>
+      <source url="https://newzone.top/rss.xml">CF1188D</source>
+      <description>
+给定 $n$ 个数字 $a_1,a_2,\cdots,a_n$，每次操作可以给某个 $a_i$ 加上 $2$ 的非负整数次幂。
+求最少的操作次数使得 $n$ 个数相等。
+$1\leq n\leq 10^5,0\leq a_i\leq 10^{17}$
+
+</description>
+      <category>CodeForces</category>
+      <pubDate>Wed, 14 Oct 2020 14:45:14 GMT</pubDate>
+      <content:encoded><![CDATA[<ul>
+<li>给定 $n$ 个数字 $a_1,a_2,\cdots,a_n$，每次操作可以给某个 $a_i$ 加上 $2$ 的非负整数次幂。</li>
+<li>求最少的操作次数使得 $n$ 个数相等。</li>
+<li>$1\leq n\leq 10^5,0\leq a_i\leq 10^{17}$</li>
+</ul>
+
+<h3 id="sol" tabindex="-1"> sol</h3>
 <ul>
 <li>
-<p><a href="https://newzone.top/_posts/2017-04-22-rss_feed43_feedex.html" target="_blank" rel="noopener noreferrer">RSS 入门篇：FEED43&amp;FeedEx-为静态网页定制 RSS 源</a></p>
+<p>不妨先将 $a$ 从小到大排序。</p>
 </li>
 <li>
-<p><a href="https://newzone.top/_posts/2018-10-07-huginn_scraping_any_website.html" target="_blank" rel="noopener noreferrer">RSS 进阶篇：Huginn - 真·为任意网页定制 RSS 源（PhantomJs 抓取）</a></p>
+<p>设最后每个数都等于 $a_n+x(x\geq 0)$。那么总代价为 $\sum\limits_{i=1}^n popcount(a_n+x-a_i)$。</p>
 </li>
 <li>
-<p><a href="https://newzone.top/_posts/2019-04-01-rsshub_noob.html" target="_blank" rel="noopener noreferrer">RSS 速成篇：RSSHub 捡现成的轮子</a></p>
+<p>现在要找一个 $x$ 使得答案最小。不妨先将 $a_i$ 变为原先的 $a_n-a_i$。</p>
 </li>
 <li>
-<p><a href="https://newzone.top/_posts/2020-03-25-rsshub_on_vps.html" target="_blank" rel="noopener noreferrer">RSS 速成篇 2：RSSHub 自部署</a></p>
+<p>那么现在总代价为 $\sum\limits_{i=1}^n popcount(x+a_i)$。</p>
 </li>
 <li>
-<p><a href="https://newzone.top/_posts/2021-10-23-nas_with_rsshub_and_huginn.html" target="_blank" rel="noopener noreferrer">RSS 完结篇：节省千元服务费，RSSHub、Huginn 转移 NAS</a></p>
-</li>
-<li>
-<p><a href="https://newzone.top/_posts/2022-03-17-rss_persistent_link_collection.html" target="_blank" rel="noopener noreferrer">RSS 汇总篇：RSS 永久链接合集，拒绝 RSS 失效</a></p>
-</li>
-</ul>
-<p><strong>参考资料</strong>：</p>
-<ul>
-<li>
-<p><a href="http://www.appinn.com/feed43/" target="_blank" rel="noopener noreferrer">FEED43 – 为没有 Feed 的网页生成 RSS 格式订阅源 [教程]</a></p>
-</li>
-<li>
-<p><a href="https://www.douban.com/note/199431341/" target="_blank" rel="noopener noreferrer">喜欢的网站，没有 rss 怎么办，自己做！！用 FEED43 自己烧制喜欢网页 rss 教程 -- 小佑 (其实内附双教程)</a></p>
-</li>
-</ul>
-]]></content:encoded>
-      <enclosure url="https://pic1.zhimg.com/v2-b5da0b08f632376fad3925a779e373b4_r.jpg" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>office 2016 安装程序报错解决办法</title>
-      <link>https://newzone.top/_posts/2017-07-28-office_2016_installer_error.html</link>
-      <guid>https://newzone.top/_posts/2017-07-28-office_2016_installer_error.html</guid>
-      <source url="https://newzone.top/rss.xml">office 2016 安装程序报错解决办法</source>
-      <category>系统</category>
-      <pubDate>Fri, 28 Jul 2017 11:02:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>重新安装 Office 系统或更改安装组件时，经常提示：「找不到有效的安装源」，但实际这些文件都能在安装包内找到。这是由于注册表和组件而导致的报错，<strong>「找不到有效的安装源」并不是真实原因</strong>，解决方法查看下方。</p>
-<p><img src="https://pic3.zhimg.com/v2-85bd2a49a47ee6d0c8eade7b3c249516_r.jpg" alt="" loading="lazy"></p>
-<h2 id="解决方法" tabindex="-1"> 解决方法</h2>
+<p>从低到高考虑每一位，那么 $x+a_i$ 的第 $k$ 位是 $0/1$ 由以下三个条件决定：</p>
 <ol>
-<li>
-<p>打开 regedit.exe，在注册表中找到路径 <code>计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\Delivery\SourceEngine\Downloads\{90160000-00BA-0804-1000-0000000FF1CE}-C\Sources\PROPLUS16(RG)-6186D162</code>。</p>
+<li>$x$ 的第 $k$ 位是 $0$ 还是 $1$</li>
+<li>$a_i$ 的第 $k$ 位是 $0$ 还是 $1$</li>
+<li>$x+a_i$ 的第 $k-1$ 位有没有向前进位</li>
+</ol>
 </li>
 <li>
-<p>修改 Path 数据，改为安装包位置，比如 <code>F:\5.软件资源\系统重装\SW_DVD5_Office_Professional_Plus_2016_64Bit_ChnSimp_MLF_X20-42426\groove.zh-cn</code>。</p>
-<p><img src="https://pic3.zhimg.com/v2-650ede86dd191a8f0a1cd6e9b815377a_r.jpg" alt="" loading="lazy"></p>
+<p>暴力的做法是从低到高枚举每一位，用 $2^n$ 的状态记录每个数有没有进位，显然复杂度接受不了。</p>
 </li>
 <li>
-<p>在 C 盘建立安装组件：</p>
+<p>但是可以发现，由于每个 $a_i$ 加的都是 $x$，所以 $a_i$ 的后 $k-1$ 位越大，越可能向第 $k$ 位进位。</p>
+</li>
+<li>
+<p>所以，“每个数有没有进位”的状态数只有 $O(n)$ 个，每个进位状态为后 $k-1$ 位从小到大排序后的一个后缀。</p>
+</li>
+<li>
+<p>记 $f[k][i]$ 表示考虑了后 $k$ 位，后 $k$ 位最大的 $i$ 个数进位的最小代价。</p>
+</li>
+<li>
+<p>如何转移？考虑当前这一位 $x$ 是 $0$ 还是 $1$。</p>
+</li>
+<li>
+<p>0：</p>
 <ul>
-<li>把安装包路径 <code>\groove.zh-cn\</code> 下的文件复制到 <code>C:\MSOCache\All Users\{90160000-00BA-0804-1000-0000000FF1CE}-C</code> 目录下 (如果没有这个目录就自己建立)。</li>
-<li>把安装包路径 <code>\proplus.ww\</code> 下的文件复制到 <code>C:\MSOCache\All Users\{90160000-0011-0000-1000-0000000FF1CE}-C</code>。</li>
+<li>对答案的贡献：“前一位没进位且第 $k$ 位为 $1$ 的数“的个数 + ”前一位进位且第 $k$ 位为 $0$ 的数“的个数（$x+a_i$ 在这一位为 $1$）；</li>
+<li>进位的数量：&quot;前一位进位且第 $k$ 位为 $1$ 的数&quot;的个数。</li>
 </ul>
 </li>
 <li>
-<p>将需要的程序文件放入 MSOCache 路径
-MSOCache 其它的目录下内容同样根据注册表的内容把它指示的光盘中的安装文件复制到相应的目录下。如果没有那个目录就要自己建立，类似的目录一共有 12 个。
-如果不想全装可以只选择需要的软件，下面以 Onenote 和 Access 为例。</p>
+<p>1：</p>
 <ul>
-<li><strong>Onenote</strong> 把安装包路径 <code>\onenote.zh-cn\</code> 下的文件复制到 <code>C:\MSOCache\All Users\{90160000-00A1-0804-1000-0000000FF1CE}-CC</code>。</li>
-<li><strong>Access</strong> 把安装包路径 <code>\access.zh-cn\</code> 下的文件复制到 <code>C:\MSOCache\All Users\{90160000-0015-0804-1000-0000000FF1CE}-C</code>。</li>
+<li>对答案的贡献：“前一位进位且第 $k$ 位为 $1$ 的数“的个数 + ”前一位没进位且第 $k$ 位为 $0$ 的数“的个数（$x+a_i$ 在这一位为 $1$）；</li>
+<li>进位的数量：$n-$&quot;前一位没进位且第 $k$ 位为 $0$ 的数&quot;的个数。</li>
 </ul>
 </li>
 <li>
-<p>最后进入安装包运行 setup.exe 安装正常。</p>
-</li>
-</ol>
-<p>Office 组件报错大都是由于 MSOCache 目录被删，建议安装 Office 后不要删除该目录。使用优化工具时，要注意保留 MSOCache 目录及其下的文件。</p>
-]]></content:encoded>
-      <enclosure url="https://pic3.zhimg.com/v2-85bd2a49a47ee6d0c8eade7b3c249516_r.jpg" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>OneNote 2016 无法登陆问题解决</title>
-      <link>https://newzone.top/_posts/2017-07-29-onenote_2016_cannot_be_logged_in.html</link>
-      <guid>https://newzone.top/_posts/2017-07-29-onenote_2016_cannot_be_logged_in.html</guid>
-      <source url="https://newzone.top/rss.xml">OneNote 2016 无法登陆问题解决</source>
-      <category>系统</category>
-      <pubDate>Sat, 29 Jul 2017 15:19:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>OneNote 安装后，提示输入账号，但点击「下一步」始终没反应，无法进行登陆。</p>
-<p><img src="https://pic4.zhimg.com/v2-d5945359b896ffd09d9973e9597ec06b_r.jpg" alt="" loading="lazy"></p>
-<p>打开 IE 浏览器，访问 live.com，如果网页提示「登录需要启动 JavaScript」，说明问题的根源出在 IE 的设置上。</p>
-<p><img src="https://pic1.zhimg.com/v2-cc00b3039f755b92f9ae511c8b7debd0_r.jpg" alt="" loading="lazy"></p>
-<p>依次点击「IE 设置 - Internet 选项 - 安全 - 自定义级别」，然后启用脚本选项的「Java 小程序脚本」和「活动脚本」。</p>
-<p><img src="https://pic2.zhimg.com/v2-717bf3c8b62748b62a04219435b8a75d_r.jpg" alt="" loading="lazy"></p>
-<p><img src="https://pic4.zhimg.com/v2-25697b0c27aa8780c532b7a03a78dcbf_r.jpg" alt="" loading="lazy"></p>
-<p>完成设置后，即可正常登录并打开 OneNote。</p>
-<p><img src="https://pic4.zhimg.com/v2-ff20ef8aa22215cba64b879775dfdf4f_r.jpg" alt="" loading="lazy"></p>
-]]></content:encoded>
-      <enclosure url="https://pic4.zhimg.com/v2-d5945359b896ffd09d9973e9597ec06b_r.jpg" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>电脑关机了，第二天一看确又开着的？让系统正常关机！</title>
-      <link>https://newzone.top/_posts/2017-09-02-forced_shutdown.html</link>
-      <guid>https://newzone.top/_posts/2017-09-02-forced_shutdown.html</guid>
-      <source url="https://newzone.top/rss.xml">电脑关机了，第二天一看确又开着的？让系统正常关机！</source>
-      <category>系统</category>
-      <pubDate>Sat, 02 Sep 2017 00:38:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>电脑晚上明明按下关机键，第二天早上却发现电脑开了一晚上？</p>
-<p>这是因为后台应用程序和 GUI 应用程序在阻止或取消关机，系统未能按正常关机。按下列方法授予系统自动关机权限，就能让系统正常关机。</p>
-<p><strong>方法如下：</strong></p>
-<ol>
-<li>
-<p>左下角「开始菜单」-「运行」，打开“运行”对话框，输入 <code>Regedit</code>，进入注册表编辑器</p>
+<p>至于如何求这些“个数”，就记个前缀和，存下后 $k$ 位从小到大前 $i$ 个中没进位数的个数和进位的数的个数即可。</p>
 </li>
 <li>
-<p>打开窗口后，在注册表上方菜单中输入 <code>计算机\HKEY_CURRENT_USER\Control Panel\Desktop</code>。</p>
+<p>可以用类似于基数排序的方法优化每次的排序，时间复杂度 $O(n \log V)$，其中 $V=\max{a_i}$。</p>
 </li>
-<li>
-<p>在右侧窗格中找到 <code>AutoEndTasks</code> 键值，如果没有，则新建一个名为 <code>AutoEndTasks</code> 的「字符串值」，并将键值的数值设为 <code>1</code>。AutoEndTasks 表示自动结束失去响应的程序任务，0 为 false，是默认值，表示不自动结束失去响应的程序；1 为 true，则表示电脑会自动结束失去响应的程序。</p>
-<p><img src="https://pic3.zhimg.com/v2-c643b9737b35f9dd9a8382c5653e3d3e_r.jpg" alt="" loading="lazy"></p>
-</li>
-<li>
-<p>查找或创建字符串值 <code>WaitToKillAppTimeout</code>，将数值设为 <code>2000</code>。2000 是毫秒，就是当有没有响应的程序时，等待 2 秒后会自动结束相应程序。</p>
-</li>
-</ol>
-<p>操作下，让电脑默认强制关机吧！</p>
-<p>——————————</p>
-<p>网上流行一种修改「gpedit.msc」来达到快速关机的方法，但试验无效，<strong>不能强制关机</strong>。</p>
-<ol>
-<li>
-<p>点击桌面左下角“windows”图标，选择“运行”选项；</p>
-</li>
-<li>
-<p>进入运行窗口，输入“gpedit.msc”命令，按下回车键确定；</p>
-</li>
-<li>
-<p>打开本地组策略编辑器界面，依次展开“计算机配置——管理模板——系统——关机选项”文件夹；鼠标右击右侧“关闭会阻止或取消关机的应用程序的自动终止功能”选项，接着选择“编辑”功能；将弹出窗口选项更改成“已启用”，然后点击“应用——确定”按钮。</p>
-<p><img src="https://pic4.zhimg.com/v2-4b736585b25509b036935a2f9c37d843_r.jpg" alt="" loading="lazy"></p>
-<p>但开启后，提示程序没有响应，无法关机。</p>
-<p><img src="https://pic4.zhimg.com/v2-46fafee0cb6e212e793fc80268ab0917_r.jpg" alt="" loading="lazy"></p>
-</li>
-</ol>
-<p>修改“gpedit.msc”可以关闭程序的关机权限，但没授予关机对程序的关闭权限，<strong>不能使用</strong>！</p>
-]]></content:encoded>
-      <enclosure url="https://pic3.zhimg.com/v2-c643b9737b35f9dd9a8382c5653e3d3e_r.jpg" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>加速 SMB 协议，让 PC 变身小型 NAS</title>
-      <link>https://newzone.top/_posts/2017-09-03-smb_lan_sharing.html</link>
-      <guid>https://newzone.top/_posts/2017-09-03-smb_lan_sharing.html</guid>
-      <source url="https://newzone.top/rss.xml">加速 SMB 协议，让 PC 变身小型 NAS</source>
-      <category>系统</category>
-      <pubDate>Sun, 03 Sep 2017 20:57:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>Windows 系统开启 SMB 协议：</p>
-<ol>
-<li>
-<p>打开「控制面板」窗口，在「类别」查看方式下单击「程序」。</p>
-<p><img src="https://pic1.zhimg.com/v2-af3e5c2a16a1f245ac6584097c53be60_r.jpg" alt="" loading="lazy"></p>
-</li>
-<li>
-<p>打开「程序」窗口，单击「启用或关闭 windows 功能」。</p>
-<p><img src="https://pic1.zhimg.com/v2-36207f67a5eb3aeb8ee7c1ae855b13dc_r.jpg" alt="" loading="lazy"></p>
-</li>
-<li>
-<p>打开「windows 功能」窗口，勾选 SMB 直通。</p>
-<p><img src="https://pic3.zhimg.com/v2-b1feb5554e6f1da003266be9cb470dfe_r.jpg" alt="" loading="lazy"></p>
-</li>
-<li>
-<p>勾选「远程差分压缩 API 支持」。</p>
-<p><img src="https://pic4.zhimg.com/v2-c5fc3e3d771b6e4bd2516372c69b340b_r.jpg" alt="" loading="lazy"></p>
-</li>
-</ol>
-<p>网上很多教程都要求关闭“远程差分压缩”复选框，这是对“远程差分压缩”的误解。</p>
-<p>官方解释：远程差分压缩 (RDC) 功能是一组应用程序编程接口 (API)，这些应用程序可用于确定某个文件集是否发生了变化，如果是，就检测哪部分文件进行了更改。RDC 检测文件中数据的插入、删除和重新排列，使应用程序能够仅复制文件的已更改部分。这对于在有限带宽网络（如广域网 (WAN) 连接）上复制文件非常有用。</p>
-]]></content:encoded>
-      <enclosure url="https://pic1.zhimg.com/v2-af3e5c2a16a1f245ac6584097c53be60_r.jpg" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>光猫改造 篇一：超级管理员密码破解（E8-C-EPON RG201O-CA_V1A2)</title>
-      <link>https://newzone.top/_posts/2017-10-18-light_cat_e8-c-epon_admin.html</link>
-      <guid>https://newzone.top/_posts/2017-10-18-light_cat_e8-c-epon_admin.html</guid>
-      <source url="https://newzone.top/rss.xml">光猫改造 篇一：超级管理员密码破解（E8-C-EPON RG201O-CA_V1A2)</source>
-      <category>网络</category>
-      <pubDate>Wed, 18 Oct 2017 18:28:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="为什么要获得光猫超级密码" tabindex="-1"> 为什么要获得光猫超级密码？</h2>
-<p>*端口映射 (eMule high ID)、桥接模式（路由器掌控拨号，不能兼容固定电话）。*网上关于光猫超级密码的获取攻略都在 2012-14 年，已经无法使用了。</p>
-<h3 id="测试环境" tabindex="-1"> 测试环境</h3>
-<p>运营商：上海电信
-设备：贝尔 E8-C-EPON
-硬件版本：RG201O-CA_V1A2
-软件版本：E201OCAA2V11S</p>
-<h2 id="光猫超级密码破解步骤" tabindex="-1"> 光猫超级密码破解步骤</h2>
-<ol>
-<li>
-<p>地址栏输入 <code>192.168.1.1</code>，用户名：光猫背面，密码：光猫背面，登陆管理界面。</p>
-<p><img src="https://pic1.zhimg.com/v2-9e43bc86b9095f3f6c2cfa4bd58dcd68_r.jpg" alt="" loading="lazy"></p>
-</li>
-<li>
-<p>浏览器地址栏输入 <code>192.168.1.1/backupsettings.txt</code>，将 <code>backupsettings.txt</code> 文件导出并备份在电脑上。
-如果打不开上面的地址，改为输入 <code>192.168.1.1/backupsettings.conf</code>，并做好备份。</p>
-</li>
-<li>
-<p>打开下载好的文档 <code>backupsettings.txt</code> 或 <code>backupsettings.conf</code>，搜索 <code>TeleComAccount</code>，两个 password 间就是超级密码。超级账号是 telecomadmin。</p>
-<p><img src="https://pic3.zhimg.com/v2-ee441dd18cc8e5f6303fdaef82b6d476_r.jpg" alt="" loading="lazy"></p>
-</li>
-<li>
-<p>地址栏输入 <code>192.168.1.1</code>，用刚获取的超级密码登陆，然后开始端口映射和设备桥接了。</p>
-<p><img src="https://pic1.zhimg.com/v2-31d6bb6b90be541c186a360fe2dd323c_r.jpg" alt="" loading="lazy"></p>
-</li>
-</ol>
-<p>新装光猫无法获取超级密码的话，可直接使用运营商 app 进行映射。</p>
-]]></content:encoded>
-      <enclosure url="https://pic1.zhimg.com/v2-9e43bc86b9095f3f6c2cfa4bd58dcd68_r.jpg" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>光猫改造 篇二：光猫 + 路由器，实现端口映射</title>
-      <link>https://newzone.top/_posts/2017-10-18-light_cat_port_forwarding.html</link>
-      <guid>https://newzone.top/_posts/2017-10-18-light_cat_port_forwarding.html</guid>
-      <source url="https://newzone.top/rss.xml">光猫改造 篇二：光猫 + 路由器，实现端口映射</source>
-      <category>网络</category>
-      <pubDate>Wed, 18 Oct 2017 22:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>光猫默认没有管理权限，需要先获得光猫的超管密码，参考 <a href="https://newzone.top/_posts/2017-10-18-Light_cat_E8-C-EPON_admin.html" target="_blank" rel="noopener noreferrer">光猫改造 篇一：超级管理员密码破解（E8-C-EPON RG201O-CA_V1A2）</a>。</p>
-<p><strong>光猫端口映射步骤：</strong></p>
-<ol>
-<li>
-<p>登陆光猫管理地址 192.168.1.1，应用 → 高级 NAT 设置 →DMZ 设置，启用 DMZ 主机绑定路由器地址（路由器 WAN 口 IP 地址-192.168.1.X)</p>
-<p><img src="https://pic2.zhimg.com/v2-658d5433201b79da169a520f4b19d495_r.jpg" alt="" loading="lazy"></p>
-</li>
-<li>
-<p>登陆路由器管理地址 192.168.X.X。这里已梅林 AC5300 为图例。</p>
-<p><img src="https://pic4.zhimg.com/v2-32825a6d3d75f4bfe5668f1b0d6c6683_r.jpg" alt="" loading="lazy"></p>
-</li>
-<li>
-<p>在路由器设置选项中找到“端口转发”，按要求设置端口。我这是 eMule TCP 和 UDP 转发，设置完成后，变成 High ID。</p>
-<p><img src="https://pic2.zhimg.com/v2-8f3eb2c42fd5d1a98f1345c6a5855e99_r.jpg" alt="" loading="lazy"></p>
-<p><img src="https://pic2.zhimg.com/v2-b4f5179278da52409f4a04ce7d139f99_r.jpg" alt="" loading="lazy"></p>
-</li>
-</ol>
-]]></content:encoded>
-      <enclosure url="https://pic2.zhimg.com/v2-658d5433201b79da169a520f4b19d495_r.jpg" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>小型网站管理员，快放弃 CDN！</title>
-      <link>https://newzone.top/_posts/2018-01-19-forget_the_cdn.html</link>
-      <guid>https://newzone.top/_posts/2018-01-19-forget_the_cdn.html</guid>
-      <source url="https://newzone.top/rss.xml">小型网站管理员，快放弃 CDN！</source>
-      <category>服务器</category>
-      <pubDate>Fri, 19 Jan 2018 12:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<blockquote>
-<p>CDN 的全称是 Content Delivery Network，即内容分发网络。其基本思路是尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，使内容传输的更快、更稳定。通过在网络各处放置节点服务器所构成的在现有的互联网基础之上的一层智能虚拟网络，CDN 系统能够实时地根据网络流量和各节点的连接、负载状况以及到用户的距离和响应时间等综合信息将用户的请求重新导向离用户最近的服务节点上。其目的是使用户可就近取得所需内容，解决 Internet 网络拥挤的状况，提高用户访问网站的响应速度。</p>
-</blockquote>
-<p>国内 CDN 有阿里云、腾讯、百度、网宿、七牛云、又拍云等。</p>
-<p>这里以阿里云 CDN 为例。我之前使用阿里云全站 CDN，一直以为速度会加快。但命中率只有 7%，在更换为 ECS 后，命中率更降为 2%。</p>
-<p>更可怕的是，我提交工单后才得到的事实。<strong>CDN 运营商会根据 DNS 分配就近分配 CDN 节点，抓取网站缓存。</strong></p>
-<p>第一反应：「不错啊。如果网站在北京，访客在上海，直接访问上海的节点，速度必然要快一些。」</p>
-<p>但事实并没有这么完美。<strong>CDN 是根据本地 DNS 来分配节点。</strong></p>
-<p>你从上海放出访问申请，DNS 有可能帮你分配去广东的节点。极端情况下，有可能分配到不同运营商，<strong>导致无法打开网站。</strong></p>
-<p>我进行了三个测试，本地网络环境都是上海电信，更换了 DNS 设置。</p>
-<p>第一次测试使用 114DNS，分配了广州鹏博士网络，网站打不开。提交工单后，客服反映<strong>这个节点是局域网节点，只有鹏博士网络才能打开。</strong></p>
-<p>第二次测试使用电信默认 DNS，分配苏州电信，网站正常。</p>
-<p>第三次测试使用阿里云 DNS，分配杭州电信，网站正常</p>
-<p>后面两次虽然都能打开网站，但没有一个分配在上海电信，这种加速又能快多少呢？</p>
-<p>在网站<strong>配置足够、流量不大（日均访客 1000 以内）</strong> 时，不建议使用全站 CDN，这只会拖累访问体验。小网站只适合将图片部署在 CDN。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>雇个机器人帮你干活</title>
-      <link>https://newzone.top/_posts/2018-01-31-hire_a_robot.html</link>
-      <guid>https://newzone.top/_posts/2018-01-31-hire_a_robot.html</guid>
-      <source url="https://newzone.top/rss.xml">雇个机器人帮你干活</source>
-      <category>自动化</category>
-      <pubDate>Wed, 31 Jan 2018 22:51:00 GMT</pubDate>
-      <content:encoded><![CDATA[<blockquote>
-<p>机器人会取代你工作！
-计算云会取代你工作！
-AI 会取代你的工作！</p>
-</blockquote>
-<p>我相信科技终究有一天会消灭所有工作，但我们这代人的无奈就是很难等到这一天。</p>
-<p>作为懒人、宅男，等不及了怎么办？</p>
-<p>既然还没被取代，那就<strong>雇个机器人帮你干活</strong>！</p>
-<p>我每天第一件事是去各个网站看热门新闻、行业资料。以前是用 RSS，但 RSS 被视为落后，越来越多的网站不再提供 RSS 源。离开 RSS，我就一直没找到更合适的方法去将内容聚合起来，不得不在一个个网站间疲于奔命，逐渐不再看内容。</p>
-<blockquote>
-<p>RSS(Really Simple Syndication) 是一种描述和同步网站内容的格式，是使用最广泛的 XML 应用。简易信息聚合（也叫聚合内容）是一种 RSS 基于 XML 标准，在互联网上被广泛采用的内容包装和投递协议。</p>
-</blockquote>
-<ul>
-<li><input type="checkbox" id="task-item-0" disabled="disabled"><label for="task-item-0"> 增加 <code>Alfred</code> 搜索</label></li>
 </ul>
-<p><strong>直到遇到了我的第一个机器人雇员 <a href="https://github.com/huginn/huginn" target="_blank" rel="noopener noreferrer">Huginn</a></strong></p>
-<blockquote>
-<p>Huginn 是一个可以创建为你在线执行自动化任务的系统。Huginn 可以读取网页，监测事件并且执行符合你需求的动作。Huginn 通过 agents 创建并执行任务（事件流）。你可以将它看作是一个运行在你自己服务器上的 IFTTT 或 Zapier。</p>
-</blockquote>
-<p>Huginn 帮我将所有信息聚合成 RSS，24 小时帮我获取我要的内容。</p>
-<ul>
-<li><a href="http://news.163.com/rank" target="_blank" rel="noopener noreferrer">网易热门新闻</a>：抓取网易顶贴最多的 100 条新闻</li>
-<li><a href="http://top.baidu.com/buzz?b=1" target="_blank" rel="noopener noreferrer">百度实时热点</a>：实时更新每天的百度热点</li>
-<li><a href="https://www.guokr.com/" target="_blank" rel="noopener noreferrer">果壳网</a>：果壳首页推荐，官方更新速度较慢，刚好可以了解些奇思妙想</li>
-<li>工作类：梅花、SocialBeta、数英网、艾瑞网</li>
+<div><pre><code><span><span>#</span><span>include</span><span>&lt;cstdio></span></span>
+<span><span>#</span><span>include</span><span>&lt;algorithm></span></span>
+<span>using</span> <span>namespace</span> std<span>;</span>
+<span>typedef</span> <span>long</span> <span>long</span> ll<span>;</span>
+<span>const</span> ll INF<span>=</span><span>1ll</span><span>&lt;&lt;</span><span>60</span><span>;</span>
+<span>int</span> n<span>,</span>p<span>[</span><span>510000</span><span>]</span><span>,</span>sum<span>[</span><span>2</span><span>]</span><span>[</span><span>510000</span><span>]</span><span>;</span>
+<span>int</span> tmp1<span>[</span><span>510000</span><span>]</span><span>,</span>tmp2<span>[</span><span>510000</span><span>]</span><span>;</span>
+ll dp<span>[</span><span>60</span><span>]</span><span>[</span><span>510000</span><span>]</span><span>,</span>c1<span>,</span>c2<span>,</span>c3<span>,</span>p1<span>,</span>p2<span>,</span>m<span>;</span>
+ll sta<span>,</span>a<span>[</span><span>510000</span><span>]</span><span>;</span>
+<span>/*bool cmp(int x,int y){
+	return (a[x]&amp;sta)&lt;(a[y]&amp;sta);
+}*/</span>
+<span>int</span> <span>main</span><span>(</span><span>)</span><span>{</span>
+<span>//	freopen("equal.in","r",stdin);</span>
+<span>//	freopen("equal.out","w",stdout);</span>
+	<span>scanf</span><span>(</span><span>"%d"</span><span>,</span><span>&amp;</span>n<span>)</span><span>;</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>n<span>;</span>i<span>++</span><span>)</span> <span>scanf</span><span>(</span><span>"%lld"</span><span>,</span><span>&amp;</span>a<span>[</span>i<span>]</span><span>)</span><span>;</span>
+	<span>sort</span><span>(</span>a<span>+</span><span>1</span><span>,</span>a<span>+</span>n<span>+</span><span>1</span><span>)</span><span>;</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>n<span>;</span>i<span>++</span><span>)</span> a<span>[</span>i<span>]</span><span>=</span>a<span>[</span>n<span>]</span><span>-</span>a<span>[</span>i<span>]</span><span>;</span>
+	<span>for</span> <span>(</span><span>int</span> w<span>=</span><span>0</span><span>;</span>w<span>&lt;=</span><span>58</span><span>;</span>w<span>++</span><span>)</span>
+		<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>0</span><span>;</span>i<span>&lt;=</span>n<span>;</span>i<span>++</span><span>)</span>
+			dp<span>[</span>w<span>]</span><span>[</span>i<span>]</span><span>=</span>INF<span>;</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>n<span>;</span>i<span>++</span><span>)</span> p<span>[</span>i<span>]</span><span>=</span>i<span>;</span>
+	dp<span>[</span><span>0</span><span>]</span><span>[</span><span>0</span><span>]</span><span>=</span><span>0</span><span>;</span>
+	<span>for</span> <span>(</span><span>int</span> w<span>=</span><span>0</span><span>;</span>w<span>&lt;</span><span>58</span><span>;</span>w<span>++</span><span>)</span><span>{</span>
+		sta<span>=</span><span>(</span><span>1ll</span><span>&lt;&lt;</span>w<span>)</span><span>-</span><span>1</span><span>;</span>
+<span>//		sort(p+1,p+n+1,cmp);</span>
+		<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>n<span>;</span>i<span>++</span><span>)</span><span>{</span>
+			sum<span>[</span><span>0</span><span>]</span><span>[</span>i<span>]</span><span>=</span>sum<span>[</span><span>0</span><span>]</span><span>[</span>i<span>-</span><span>1</span><span>]</span><span>;</span>
+			sum<span>[</span><span>1</span><span>]</span><span>[</span>i<span>]</span><span>=</span>sum<span>[</span><span>1</span><span>]</span><span>[</span>i<span>-</span><span>1</span><span>]</span><span>;</span>
+			sum<span>[</span><span>(</span>a<span>[</span>p<span>[</span>i<span>]</span><span>]</span><span>>></span>w<span>)</span><span>&amp;</span><span>1</span><span>]</span><span>[</span>i<span>]</span><span>++</span><span>;</span>
+		<span>}</span>
+		<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>0</span><span>;</span>i<span>&lt;=</span>n<span>;</span>i<span>++</span><span>)</span><span>{</span>
+			<span>int</span> tmp<span>=</span><span>(</span>sum<span>[</span><span>0</span><span>]</span><span>[</span>n<span>]</span><span>-</span>sum<span>[</span><span>0</span><span>]</span><span>[</span>n<span>-</span>i<span>]</span><span>)</span><span>+</span>sum<span>[</span><span>1</span><span>]</span><span>[</span>n<span>-</span>i<span>]</span><span>;</span>
+			<span>int</span> sta<span>=</span>sum<span>[</span><span>1</span><span>]</span><span>[</span>n<span>]</span><span>-</span>sum<span>[</span><span>1</span><span>]</span><span>[</span>n<span>-</span>i<span>]</span><span>;</span>
+			dp<span>[</span>w<span>+</span><span>1</span><span>]</span><span>[</span>sta<span>]</span><span>=</span><span>min</span><span>(</span>dp<span>[</span>w<span>+</span><span>1</span><span>]</span><span>[</span>sta<span>]</span><span>,</span>dp<span>[</span>w<span>]</span><span>[</span>i<span>]</span><span>+</span>tmp<span>)</span><span>;</span>
+		<span>}</span>
+		<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>0</span><span>;</span>i<span>&lt;=</span>n<span>;</span>i<span>++</span><span>)</span><span>{</span>
+			<span>int</span> tmp<span>=</span><span>(</span>sum<span>[</span><span>1</span><span>]</span><span>[</span>n<span>]</span><span>-</span>sum<span>[</span><span>1</span><span>]</span><span>[</span>n<span>-</span>i<span>]</span><span>)</span><span>+</span>sum<span>[</span><span>0</span><span>]</span><span>[</span>n<span>-</span>i<span>]</span><span>;</span>
+			<span>int</span> sta<span>=</span>n<span>-</span>sum<span>[</span><span>0</span><span>]</span><span>[</span>n<span>-</span>i<span>]</span><span>;</span>
+			dp<span>[</span>w<span>+</span><span>1</span><span>]</span><span>[</span>sta<span>]</span><span>=</span><span>min</span><span>(</span>dp<span>[</span>w<span>+</span><span>1</span><span>]</span><span>[</span>sta<span>]</span><span>,</span>dp<span>[</span>w<span>]</span><span>[</span>i<span>]</span><span>+</span>tmp<span>)</span><span>;</span>
+		<span>}</span>
+		<span>int</span> cnt1<span>=</span><span>0</span><span>,</span>cnt2<span>=</span><span>0</span><span>;</span>
+		<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>n<span>;</span>i<span>++</span><span>)</span>
+			<span>if</span> <span>(</span><span>(</span>a<span>[</span>p<span>[</span>i<span>]</span><span>]</span><span>>></span>w<span>)</span><span>&amp;</span><span>1</span><span>)</span> tmp1<span>[</span><span>++</span>cnt1<span>]</span><span>=</span>p<span>[</span>i<span>]</span><span>;</span>
+			<span>else</span> tmp2<span>[</span><span>++</span>cnt2<span>]</span><span>=</span>p<span>[</span>i<span>]</span><span>;</span>
+		<span>int</span> k<span>=</span><span>0</span><span>;</span>
+		<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>cnt2<span>;</span>i<span>++</span><span>)</span> p<span>[</span><span>++</span>k<span>]</span><span>=</span>tmp2<span>[</span>i<span>]</span><span>;</span>
+		<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>cnt1<span>;</span>i<span>++</span><span>)</span> p<span>[</span><span>++</span>k<span>]</span><span>=</span>tmp1<span>[</span>i<span>]</span><span>;</span>
+	<span>}</span>
+	<span>printf</span><span>(</span><span>"%lld\n"</span><span>,</span>dp<span>[</span><span>58</span><span>]</span><span>[</span><span>0</span><span>]</span><span>)</span><span>;</span>
+	<span>return</span> <span>0</span><span>;</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>CF1204D</title>
+      <link>https://newzone.top/_posts/CF1204D.html</link>
+      <guid>https://newzone.top/_posts/CF1204D.html</guid>
+      <source url="https://newzone.top/rss.xml">CF1204D</source>
+      <description>
+给定一个 01 串 $s$，要求你找到一个与 $s$ 长度相等的 01 串 $t$ 并满足以下条件：
+
+对于任意的 $l,r(1\leq l\leq r\leq n)$，$s[l:r]$ 和 $t[l:r]$ 的最长不下降子序列长度相同；
+$t$ 中 $0$ 的数量尽可能多。
+
+
+有多解输出任意一种。$|S|\leq 10^5$。
+
+</description>
+      <category>CodeForces</category>
+      <pubDate>Wed, 06 Oct 2021 10:21:35 GMT</pubDate>
+      <content:encoded><![CDATA[<ul>
+<li>给定一个 01 串 $s$，要求你找到一个与 $s$ 长度相等的 01 串 $t$ 并满足以下条件：
+<ol>
+<li>对于任意的 $l,r(1\leq l\leq r\leq n)$，$s[l:r]$ 和 $t[l:r]$ 的最长不下降子序列长度相同；</li>
+<li>$t$ 中 $0$ 的数量尽可能多。</li>
+</ol>
+</li>
+<li>有多解输出任意一种。$|S|\leq 10^5$。</li>
 </ul>
+
+<h3 id="sol" tabindex="-1"> sol</h3>
+<ul>
+<li>
+<p>这个题非常有意思。容易想到按照一个顺序依次确定每个位置的值。</p>
+</li>
+<li>
+<p>但是前面的位置确定了，当前位置的值不仅和之前的最长不下降子序列长度有关，还和 $1$ 的个数有关。</p>
+</li>
+<li>
+<p>发现 <code>10</code> 是不能被其它等长的串所替换的，它的最长不下降子序列长度为 $1$，而其它等长的串都为 $2$。</p>
+</li>
+<li>
+<p>有一个思路（猜测），就是把串中的 <code>10</code> 不断删除，直到不存在。但这样真的行吗？</p>
+</li>
+<li>
+<p>删除某个 <code>10</code> 后对所有 $l,r$ 最长不下降子序列长度的影响：</p>
+<ol>
+<li>$l,r$ 完全包含被删除的 <code>10</code>，那么原先无论最长不下降子序列是怎么选的，都一定会选择 <code>10</code> 中的恰好一个数，现在它的长度必定减少 1；</li>
+<li>$l,r$ 和 被删除的 <code>10</code> 无交，那么最长不下降子序列长度不影响；</li>
+<li>$l,r$ 和 被删除的 <code>10</code> 有交但不包含，即 $l$ 或 $r$ 在 <code>10</code> 之间，如果是 $l$ 则原子序列一定会选择最左边的 $0$，如果是 $r$ 则原子序列一定会选择最右边的 $1$，删去后长度必定减少 1。</li>
+</ol>
+</li>
+<li>
+<p>删去后的问题，如果 $s'$ 和 $t'$ 满足条件，那么加回这个 <code>10</code> 后仍然满足条件。</p>
+</li>
+<li>
+<p>所以可以一直删去 <code>10</code>，直到没有 <code>10</code>。考虑现在的串一定为 <code>00...011...1</code>，可以把所有数字都变成 $0$，所有 $l,r$ 最长不下降子序列长度不变。</p>
+</li>
+<li>
+<p>具体实现可以从左到右扫描，维护一个栈记录之前还没被删去的 $1$ 的位置，如果当前为 $0$ 且栈不为空则可以和前面的一起删去，否则加入栈。最后栈中的 $1$ 即没有被删去的 $1$，都变为 $0$ 即可。</p>
+</li>
+</ul>
+<div><pre><code><span><span>#</span><span>include</span><span>&lt;bits/stdc++.h></span></span>
+<span>using</span> <span>namespace</span> std<span>;</span>
+string s<span>;</span> <span>int</span> top<span>,</span>t<span>[</span><span>110000</span><span>]</span><span>;</span>
+<span>int</span> <span>main</span><span>(</span><span>)</span><span>{</span>
+	cin<span>>></span>s<span>;</span> <span>int</span> n<span>=</span>s<span>.</span><span>length</span><span>(</span><span>)</span><span>;</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>0</span><span>;</span>i<span>&lt;</span>n<span>;</span>i<span>++</span><span>)</span>
+		<span>if</span> <span>(</span>s<span>[</span>i<span>]</span><span>==</span><span>'1'</span><span>)</span> t<span>[</span><span>++</span>top<span>]</span><span>=</span>i<span>;</span>
+		<span>else</span> <span>if</span> <span>(</span>top<span>)</span> top<span>--</span><span>;</span>
+	<span>while</span> <span>(</span>top<span>)</span> s<span>[</span>t<span>[</span>top<span>--</span><span>]</span><span>]</span><span>=</span><span>'0'</span><span>;</span>
+	cout<span>&lt;&lt;</span>s<span>&lt;&lt;</span>endl<span>;</span>
+	<span>return</span> <span>0</span><span>;</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>CF1365F</title>
+      <link>https://newzone.top/_posts/CF1365F.html</link>
+      <guid>https://newzone.top/_posts/CF1365F.html</guid>
+      <source url="https://newzone.top/rss.xml">CF1365F</source>
+      <description>
+给定 $n$ 和数字串 $a_1,a_2,\cdots,a_n$，$b_1,b_2,\cdots,b_n$。
+定义一次操作为：将一个等长且不相交的前缀和后缀对应位置交换。举例：${1,2,3,4,5,6}$ 交换长度为 $2$ 的前后缀变为 ${5,6,3,4,1,2}$。
+可以对 $a$ 进行任意次操作，问是否能变成 $b$。多组数据。
+$1\leq T\leq 500,1\leq n\leq 500,1\leq a_i,b_i\leq 10^9$。
+
+</description>
+      <category>CodeForces</category>
+      <pubDate>Tue, 05 Oct 2021 22:53:35 GMT</pubDate>
+      <content:encoded><![CDATA[<ul>
+<li>给定 $n$ 和数字串 $a_1,a_2,\cdots,a_n$，$b_1,b_2,\cdots,b_n$。</li>
+<li>定义一次操作为：将一个等长且不相交的前缀和后缀对应位置交换。举例：${1,2,3,4,5,6}$ 交换长度为 $2$ 的前后缀变为 ${5,6,3,4,1,2}$。</li>
+<li>可以对 $a$ 进行任意次操作，问是否能变成 $b$。多组数据。</li>
+<li>$1\leq T\leq 500,1\leq n\leq 500,1\leq a_i,b_i\leq 10^9$。</li>
+</ul>
+
+<h3 id="sol" tabindex="-1"> sol</h3>
+<ul>
+<li>一个显然的结论：如果 $n$ 为奇数，则两个串 $\frac {n+1}2$ 位置必须相同（因为不能翻转）。</li>
+<li>我们称下标和为 $n+1$ 的数是对应的（换句话说，第 $i$ 个位置的数和第 $n-i+1$ 位置的数是对应的），那么可以发现，对应位置形成的无序对是永远不会改变的（对于左边的数 $i$ 移动到 $i+(n-k)$，对于右边的数 $n-i+1$ 移动到 $n-i+1-(n-k)$，它们之和依旧为 $n+1$）。</li>
+<li>于是大胆猜测原问题等价于是否满足 $a,b$ 无序对相同。</li>
+</ul>
+<h4 id="证明" tabindex="-1"> 证明</h4>
+<ul>
+<li>首先，上述结论是必要的。</li>
+<li>其次，若对于满足上述结论的 $a$，能构造出合法的操作序列，那么原问题和 $a$ 是否满足上述结论是等价的。接下来需要构造操作序列。</li>
+<li>朴素的想法是从中间到两边依次确定，因为固定住中间不影响后续操作，且固定后不影响上述结论是否成立（删除了相同的无序对不影响结论）。</li>
+<li>考虑现在固定 $a_i,a_{n-i+1}$，找相同的无序对 $a_j,a_{n-j+1}$ 移动过来。设 $a_i=a_j$，分情况讨论：
+<ol>
+<li>$j=n$，那么直接翻转长度为 $i$ 的前后缀，那么 $a_n$ 翻到 $a_i$，$a_1$ 翻到 $a_{n-i+1}$，满足条件；</li>
+<li>$j=1$，那么直接翻转长度为 $1$ 的前后缀，就变成 1. 的情况了；</li>
+<li>其它，那么翻转长度为 $j(n-j+1)$ 的前后缀，那么 $j$ 就变成 1./2. 的情况了。</li>
+</ol>
+</li>
+<li>这样就变成规模更小的子问题了，所以证明了满足上述条件即成立。</li>
+</ul>
+<div><pre><code><span><span>#</span><span>include</span><span>&lt;bits/stdc++.h></span></span>
+<span>using</span> <span>namespace</span> std<span>;</span>
+<span>typedef</span> pair<span>&lt;</span><span>int</span><span>,</span><span>int</span><span>></span> pii<span>;</span>
+<span>int</span> T<span>,</span>n<span>,</span>a<span>[</span><span>510</span><span>]</span><span>,</span>b<span>[</span><span>510</span><span>]</span><span>;</span>
+pii x<span>[</span><span>510</span><span>]</span><span>,</span>y<span>[</span><span>510</span><span>]</span><span>;</span>
+<span>bool</span> <span>check</span><span>(</span><span>)</span><span>{</span>
+	<span>int</span> m<span>=</span><span>(</span>n<span>>></span><span>1</span><span>)</span><span>+</span><span>1</span><span>;</span>
+	<span>if</span> <span>(</span><span>(</span>n<span>&amp;</span><span>1</span><span>)</span><span>&amp;&amp;</span>a<span>[</span>m<span>]</span><span>!=</span>b<span>[</span>m<span>]</span><span>)</span> <span>return</span> <span>false</span><span>;</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;</span>m<span>;</span>i<span>++</span><span>)</span><span>{</span>
+		x<span>[</span>i<span>]</span><span>=</span><span>pii</span><span>(</span><span>min</span><span>(</span>a<span>[</span>i<span>]</span><span>,</span>a<span>[</span>n<span>-</span>i<span>+</span><span>1</span><span>]</span><span>)</span><span>,</span><span>max</span><span>(</span>a<span>[</span>i<span>]</span><span>,</span>a<span>[</span>n<span>-</span>i<span>+</span><span>1</span><span>]</span><span>)</span><span>)</span><span>;</span>
+		y<span>[</span>i<span>]</span><span>=</span><span>pii</span><span>(</span><span>min</span><span>(</span>b<span>[</span>i<span>]</span><span>,</span>b<span>[</span>n<span>-</span>i<span>+</span><span>1</span><span>]</span><span>)</span><span>,</span><span>max</span><span>(</span>b<span>[</span>i<span>]</span><span>,</span>b<span>[</span>n<span>-</span>i<span>+</span><span>1</span><span>]</span><span>)</span><span>)</span><span>;</span>
+	<span>}</span>
+	<span>sort</span><span>(</span>x<span>+</span><span>1</span><span>,</span>x<span>+</span>m<span>)</span><span>;</span> <span>sort</span><span>(</span>y<span>+</span><span>1</span><span>,</span>y<span>+</span>m<span>)</span><span>;</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;</span>m<span>;</span>i<span>++</span><span>)</span>
+		<span>if</span> <span>(</span>x<span>[</span>i<span>]</span><span>!=</span>y<span>[</span>i<span>]</span><span>)</span> <span>return</span> <span>false</span><span>;</span>
+	<span>return</span> <span>true</span><span>;</span>
+<span>}</span>
+<span>int</span> <span>main</span><span>(</span><span>)</span><span>{</span>
+	<span>scanf</span><span>(</span><span>"%d"</span><span>,</span><span>&amp;</span>T<span>)</span><span>;</span>
+	<span>while</span> <span>(</span>T<span>--</span><span>)</span><span>{</span>
+		<span>scanf</span><span>(</span><span>"%d"</span><span>,</span><span>&amp;</span>n<span>)</span><span>;</span>
+		<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>n<span>;</span>i<span>++</span><span>)</span> <span>scanf</span><span>(</span><span>"%d"</span><span>,</span><span>&amp;</span>a<span>[</span>i<span>]</span><span>)</span><span>;</span>
+		<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>n<span>;</span>i<span>++</span><span>)</span> <span>scanf</span><span>(</span><span>"%d"</span><span>,</span><span>&amp;</span>b<span>[</span>i<span>]</span><span>)</span><span>;</span>
+		<span>if</span> <span>(</span><span>check</span><span>(</span><span>)</span><span>)</span> <span>puts</span><span>(</span><span>"Yes"</span><span>)</span><span>;</span>
+		<span>else</span> <span>puts</span><span>(</span><span>"No"</span><span>)</span><span>;</span>
+	<span>}</span>
+	<span>return</span> <span>0</span><span>;</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>CF1603E</title>
+      <link>https://newzone.top/_posts/CF1603E.html</link>
+      <guid>https://newzone.top/_posts/CF1603E.html</guid>
+      <source url="https://newzone.top/rss.xml">CF1603E</source>
+      <description>
+如果 $max(a_1,a_2,\cdots,a_m)\cdot min(a_1,a_2,\cdots,a_m)\geq a_1+a_2+\cdots+a_m$，则整数序列 $a_1,a_2,\cdots,a_m$ 被称为好的。
+如果 $a$ 的每个非空子序列都是好的，则整数序列 $a_1,a_2,\cdots,a_n$ 被称为完美的。
+给定两个整数 $n$ 和 $M$，$M$ 是素数。求完美序列 $a_1,a_2,\cdots,a_n$ 且每项满足 $1\leq a_i\leq n+1$ 的数量，对 $M$ 取模。
+$1\leq n\leq 200,10^8\leq M\leq 10^9$。
+
+</description>
+      <category>CodeForces</category>
+      <pubDate>Sun, 31 Oct 2021 15:58:16 GMT</pubDate>
+      <content:encoded><![CDATA[<ul>
+<li>如果 $max(a_1,a_2,\cdots,a_m)\cdot min(a_1,a_2,\cdots,a_m)\geq a_1+a_2+\cdots+a_m$，则整数序列 $a_1,a_2,\cdots,a_m$ 被称为好的。</li>
+<li>如果 $a$ 的每个非空<strong>子序列</strong>都是好的，则整数序列 $a_1,a_2,\cdots,a_n$ 被称为完美的。</li>
+<li>给定两个整数 $n$ 和 $M$，$M$ 是素数。求完美序列 $a_1,a_2,\cdots,a_n$ 且每项满足 $1\leq a_i\leq n+1$ 的数量，对 $M$ 取模。</li>
+<li>$1\leq n\leq 200,10^8\leq M\leq 10^9$。</li>
+</ul>
+
+<h3 id="sol" tabindex="-1"> sol</h3>
+<ul>
+<li>可以发现 一个序列是完美的 等价于 将它从小到大排序后的序列是完美的（即顺序无关）。</li>
+</ul>
+<h4 id="判断一个从小到大的序列是否是完美的" tabindex="-1"> 判断一个从小到大的序列是否是完美的</h4>
+<ul>
+<li>
+<p>以下的序列，$a$ 都是从小到大的序列。</p>
+</li>
+<li>
+<p>发现这等价于这个序列的所有前缀都是好的。</p>
+<ul>
+<li>假设选出的子序列的最小/最大下标分别为 $l,r$，那么 $mul\geq a_1\cdot a_r\geq a_1+a_2+\cdots a_r\geq sum$。</li>
+</ul>
+</li>
+<li>
+<p>这还不够，我们再找一些条件。</p>
+</li>
+</ul>
+<ol>
+<li>$a_k\geq k$。
+<ul>
+<li>如果不满足，则 $a_1\cdot a_k&lt;a_1\cdots k&lt;a_1+a_2+\cdots a_r$ 矛盾。</li>
+</ul>
+</li>
+<li>若存在 $a_k=k$，则 $a_1=a_2=\cdots=a_k=k$。
+<ul>
+<li>$a_1\cdot a_k=a_1\cdot k\geq a_1+a_2+\cdots a_r$，即 $(a_1-a_1)+(a_2-a_1)+\cdots+(a_k-a_1)\leq 0$，而 $a_i\geq a_1$，所以 $a_i=k$。</li>
+<li>可以发现 $a_n=n$ 只有一种方案，否则 $a_n=n+1$。</li>
+</ul>
+</li>
+<li>如果 $a_n=n+1,a_i\geq i+1$，那么整个序列是完美的 等价于 整个序列是好的。
+<ul>
+<li>整个序列是好的当且仅当 $(a_1-a_1)+(a_2-a_1)+\cdots+(a_n-a_1)\leq a_1$。</li>
+<li>整个序列是完美的显然必须满足整个序列是好的。</li>
+<li>考虑前缀 $1..k$，它是好的当且仅当 $(a_1-a_1)+(a_2-a_1)+\cdots+(a_k-a_1)\leq a_1\cdot (a_k-k)$，若满足 $(a_1-a_1)+(a_2-a_1)+\cdots+(a_n-a_1)\leq a_1$（整个序列是好的） 则一定满足上述条件，而每个前缀都是好的所以整个序列是完美的。</li>
+</ul>
+</li>
+<li>如果 $a_n=n+1,a_i\geq i$，那么整个序列是完美的 等价于 满足条件 2，且整个序列是好的。
+<ul>
+<li>满足条件 2，假设 $a_1=a_2=\cdots=a_k=k$，对于长度不超过 $k$ 的前缀显然都是好的。</li>
+<li>长度超过 $k$ 的前缀证明和 3 类似。</li>
+</ul>
+</li>
+</ol>
+<h4 id="从小到大的完美序列的方案数" tabindex="-1"> 从小到大的完美序列的方案数</h4>
+<ul>
+<li>
+<p>固定 $a_1$ 的值：</p>
+<ul>
+<li>
+<p>$a_1\leq a_2\leq \cdots \leq a_n$。</p>
+</li>
+<li>
+<p>对于 $i\leq a_1$，$a_1\leq a_i\leq n+1$</p>
+<ul>
+<li>$a_2\cdots a_{i-1}$ 不能 $&lt;a_1$，否则就和单调性（从小到大）矛盾。</li>
+<li>$a_{a_1}$ 可以是 $a_{a_1}$ 也可以是更大的数。</li>
+<li>你也可以把这个条件当成：对于 $i\lt a_1$，$i+1\leq a_i\leq n+1$ 且 $a_1\leq a_{a_1}\leq n+1$，但是这个形式不便于之后的计算。</li>
+</ul>
+</li>
+<li>
+<p>对于 $i&gt;a_1$，$i+1\leq a_i\leq n+1$</p>
+<ul>
+<li>$a_i$ 不能取 $i$，否则就和 $a_1$ 的值矛盾（条件2）。</li>
+</ul>
+</li>
+<li>
+<p>$(a_1-a_1)+(a_2-a_1)+\cdots+(a_n-a_1)\leq a_1$。</p>
+</li>
+<li>
+<p>设 $b_i=a_i-a_1$，那么：</p>
+<ul>
+<li>$b_1=0$</li>
+<li>$b_1\leq b_2\leq \cdots \leq b_n$</li>
+<li>$0\leq b_i\leq n+1-a_1$</li>
+<li>$b_1+b_2+\cdots+b_n\leq a_1$</li>
+<li>$b_n\geq n+1-a_1$，$b_{n-1}\geq n-a_1$，...，$b_{a_1+1}\geq 2$</li>
+</ul>
+</li>
+<li>
+<p>显然固定 $a_1$ 后，$b$ 和 $a$ 是一一对应的。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>由于需要满足 $b_n\geq n+1-a_1$，$b_{n-1}\geq n-a_1$，...，$b_{a_1+1}\geq 2$ 和 $b_1+b_2+\cdots+b_n\leq a_1$ 这两个条件，$a_1$ 大概只有 $O(\sqrt n)$ 种取值。</p>
+</li>
+<li>
+<p>枚举发现 $n$ 取最大值 $200$ 时，$a_1\geq n-17$。</p>
+</li>
+</ul>
+<h4 id="完美序列的方案数" tabindex="-1"> 完美序列的方案数</h4>
+<ul>
+<li>即上面的做法的 $b$ 顺序可以任意排列。</li>
+<li>依旧固定 $a$ 的最小值 $x(x\geq n-17)$：
+<ul>
+<li>设 $b_i=a_i-x$，那么：
+<ul>
+<li>$\exists k,b_k=0$</li>
+<li>$0\leq b_i\leq n+1-x$</li>
+<li>$b_1+b_2+\cdots+b_n\leq x$</li>
+<li>$\geq 1$ 个数 $\geq n+1-x$，$\geq 2$ 个数 $\geq n-x$，...，$\geq n-x$ 个数 $\geq 2$。
+这等价于 $\leq x$ 个数 $\leq 1$，$\leq x+1$ 个数 $\leq 2$，...，$\leq n-1$ 个数 $\leq n-x$（再加个 $\leq n$ 个数 $\leq n+1-x$ 也不影响）。</li>
+</ul>
+</li>
+<li>对 $b$ 计数，设 $dp[i][j][k]$ 表示考虑完值 $\leq i$ 的位置，共选了 $j(j\leq x+i-1)$ 个数，选的数之和为 $k$ 的方案数。转移枚举有 $t$ 个值为 $i$ 的位置，从 $\frac{dp[i-1][j-t][k-i*t]}{t!}$ 转移过来。除这个阶乘是因为组合数选位置，最后计算答案要乘上 $n!$。</li>
+</ul>
+</li>
+<li>实现时可以使用记忆化，实际用到的状态并不多。理论时间复杂度为 $O(n^3\sqrt n\log n)$。</li>
+</ul>
+<div><pre><code><span><span>#</span><span>include</span><span>&lt;bits/stdc++.h></span></span>
+<span>using</span> <span>namespace</span> std<span>;</span>
+<span>typedef</span> <span>long</span> <span>long</span> ll<span>;</span>
+<span>int</span> n<span>,</span>Mod<span>,</span>x<span>;</span>
+ll fac<span>[</span><span>210</span><span>]</span><span>,</span>inv<span>[</span><span>210</span><span>]</span><span>;</span>
+<span>int</span> dp<span>[</span><span>210</span><span>]</span><span>[</span><span>210</span><span>]</span><span>[</span><span>210</span><span>]</span><span>;</span>
+<span>int</span> <span>solve</span><span>(</span><span>int</span> i<span>,</span><span>int</span> j<span>,</span><span>int</span> k<span>)</span><span>{</span>
+	<span>if</span> <span>(</span><span>!</span>i<span>)</span> <span>return</span> <span>(</span>k<span>?</span><span>0</span><span>:</span><span>(</span><span>!</span>j<span>?</span><span>0</span><span>:</span>inv<span>[</span>j<span>]</span><span>)</span><span>)</span><span>;</span>
+	<span>if</span> <span>(</span>j<span>></span>x<span>+</span>i<span>-</span><span>1</span><span>)</span> <span>return</span> <span>0</span><span>;</span>
+	<span>if</span> <span>(</span><span>~</span>dp<span>[</span>i<span>]</span><span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>)</span> <span>return</span> dp<span>[</span>i<span>]</span><span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>;</span>
+	<span>int</span> res<span>=</span><span>0</span><span>;</span>
+	<span>for</span> <span>(</span><span>int</span> t<span>=</span><span>0</span><span>;</span>t<span>&lt;=</span>j<span>&amp;&amp;</span>i<span>*</span>t<span>&lt;=</span>k<span>;</span>t<span>++</span><span>)</span>
+		res<span>=</span><span>(</span>res<span>+</span><span>solve</span><span>(</span>i<span>-</span><span>1</span><span>,</span>j<span>-</span>t<span>,</span>k<span>-</span>i<span>*</span>t<span>)</span><span>*</span>inv<span>[</span>t<span>]</span><span>)</span><span>%</span>Mod<span>;</span>
+	dp<span>[</span>i<span>]</span><span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>=</span>res<span>;</span> <span>return</span> res<span>;</span>
+<span>}</span>
+<span>int</span> <span>main</span><span>(</span><span>)</span><span>{</span>
+	<span>scanf</span><span>(</span><span>"%d%d"</span><span>,</span><span>&amp;</span>n<span>,</span><span>&amp;</span>Mod<span>)</span><span>;</span>
+	fac<span>[</span><span>0</span><span>]</span><span>=</span><span>1</span><span>;</span> <span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>n<span>;</span>i<span>++</span><span>)</span> fac<span>[</span>i<span>]</span><span>=</span>fac<span>[</span>i<span>-</span><span>1</span><span>]</span><span>*</span>i<span>%</span>Mod<span>;</span>
+	inv<span>[</span><span>1</span><span>]</span><span>=</span><span>1</span><span>;</span> <span>for</span> <span>(</span><span>int</span> i<span>=</span><span>2</span><span>;</span>i<span>&lt;=</span>n<span>;</span>i<span>++</span><span>)</span> inv<span>[</span>i<span>]</span><span>=</span><span>(</span>Mod<span>-</span>Mod<span>/</span>i<span>)</span><span>*</span>inv<span>[</span>Mod<span>%</span>i<span>]</span><span>%</span>Mod<span>;</span>
+	inv<span>[</span><span>0</span><span>]</span><span>=</span><span>1</span><span>;</span> <span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>n<span>;</span>i<span>++</span><span>)</span> inv<span>[</span>i<span>]</span><span>=</span>inv<span>[</span>i<span>-</span><span>1</span><span>]</span><span>*</span>inv<span>[</span>i<span>]</span><span>%</span>Mod<span>;</span>
+	<span>int</span> ans<span>=</span><span>0</span><span>;</span>
+	<span>for</span> <span>(</span>x<span>=</span><span>max</span><span>(</span><span>1</span><span>,</span>n<span>-</span><span>17</span><span>)</span><span>;</span>x<span>&lt;=</span>n<span>+</span><span>1</span><span>;</span>x<span>++</span><span>)</span><span>{</span>
+		<span>memset</span><span>(</span>dp<span>,</span><span>-</span><span>1</span><span>,</span><span>sizeof</span><span>(</span>dp<span>)</span><span>)</span><span>;</span>
+		<span>for</span> <span>(</span><span>int</span> k<span>=</span><span>0</span><span>;</span>k<span>&lt;=</span>x<span>;</span>k<span>++</span><span>)</span> ans<span>=</span><span>(</span>ans<span>+</span><span>solve</span><span>(</span>n<span>+</span><span>1</span><span>-</span>x<span>,</span>n<span>,</span>k<span>)</span><span>)</span><span>%</span>Mod<span>;</span>
+	<span>}</span>
+	<span>printf</span><span>(</span><span>"%lld\n"</span><span>,</span>ans<span>*</span>fac<span>[</span>n<span>]</span><span>%</span>Mod<span>)</span><span>;</span>
+	<span>return</span> <span>0</span><span>;</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>CF555E</title>
+      <link>https://newzone.top/_posts/CF555E.html</link>
+      <guid>https://newzone.top/_posts/CF555E.html</guid>
+      <source url="https://newzone.top/rss.xml">CF555E</source>
+      <description>
+给定一个 $n$ 个点 $m$ 条边的无向图。有 $q$ 个人，第 $i$ 个人要从 $s_i$ 到 $t_i$。
+现在你要给无向图的每条边定向。问是否存在一种定向方法使得所有人都能够到达目的地。
+$n,m,q\leq 2\times 10^5,u_i\neq v_i,s_i\neq t_i$
+
+</description>
+      <category>CodeForces</category>
+      <pubDate>Thu, 24 Sep 2020 16:35:45 GMT</pubDate>
+      <content:encoded><![CDATA[<ul>
+<li>给定一个 $n$ 个点 $m$ 条边的无向图。有 $q$ 个人，第 $i$ 个人要从 $s_i$ 到 $t_i$。</li>
+<li>现在你要给无向图的每条边定向。问是否存在一种定向方法使得所有人都能够到达目的地。</li>
+<li>$n,m,q\leq 2\times 10^5,u_i\neq v_i,s_i\neq t_i$</li>
+</ul>
+
+<h3 id="sol" tabindex="-1"> sol</h3>
+<h4 id="我的做法-186ms" tabindex="-1"> 我的做法（186ms）</h4>
+<ul>
+<li>
+<p>可以发现，对于一个边双来说，一定存在一种定向方法，使得边数内两两点之间均可到达。</p>
+</li>
+<li>
+<p>所以一个边双相当于一个点。那么我们缩点，把图变成一颗树。这样，$s$ 到 $t$ 只能走树上简单路径。</p>
+</li>
+<li>
+<p>我们把 $s\rightarrow LCA$ 的路径打向上的标记，把 $LCA\rightarrow t$ 的路径打向下的标记。$LCA$ 可以通过倍增预处理。</p>
+</li>
+<li>
+<p>只要没有一条边同时有两种标记，就是合法的。打标记使用树上差分实现。</p>
+</li>
+<li>
+<p>时间复杂度：$ O(n+m+q\log n)$。</p>
+</li>
+</ul>
+<h5 id="细节" tabindex="-1"> 细节</h5>
+<ol>
+<li>原图不保证连通，所以在缩点，预处理倍增，判断答案的时候要在每个连通块都做一次。</li>
+<li>原图可能有重边，所以 $\rm tarjan$ 的时候要记上一条边的编号而不是父亲节点。</li>
+</ol>
+<div><pre><code><span>/*********************************************************************
+ * Problem：CF555E
+ * Author：hydd
+ * Date：2020/8/30 - 2020/8/31
+*********************************************************************/</span>
+<span><span>#</span><span>include</span><span>&lt;cstdio></span></span>
+<span><span>#</span><span>include</span><span>&lt;algorithm></span></span>
+<span><span>#</span><span>include</span><span>&lt;vector></span></span>
+<span>//#define File(x) freopen(x".in","r",stdin);freopen(x".out","w",stdout)</span>
+<span>using</span> <span>namespace</span> std<span>;</span>
+<span>const</span> <span>int</span> MAXN<span>=</span><span>210000</span><span>;</span>
+<span>const</span> <span>int</span> MAXM<span>=</span><span>410000</span><span>;</span>
+<span>int</span> n<span>,</span>m<span>,</span>q<span>,</span>u<span>[</span>MAXN<span>]</span><span>,</span>v<span>[</span>MAXN<span>]</span><span>;</span>
+<span>int</span> top<span>,</span>st<span>[</span>MAXN<span>]</span><span>,</span>fr<span>[</span>MAXN<span>]</span><span>,</span>dep<span>[</span>MAXN<span>]</span><span>;</span>
+<span>int</span> cnt2<span>,</span>fa<span>[</span>MAXN<span>]</span><span>[</span><span>19</span><span>]</span><span>;</span> <span>bool</span> vis<span>[</span>MAXN<span>]</span><span>;</span>
+<span>int</span> cnt<span>,</span>num<span>[</span>MAXN<span>]</span><span>,</span>up<span>[</span>MAXN<span>]</span><span>,</span>dw<span>[</span>MAXN<span>]</span><span>;</span>
+<span>int</span> dtime<span>,</span>dfn<span>[</span>MAXN<span>]</span><span>,</span>low<span>[</span>MAXN<span>]</span><span>;</span>
+vector<span>&lt;</span><span>int</span><span>></span> vec<span>[</span>MAXN<span>]</span><span>;</span>
+<span>int</span> edgenum<span>=</span><span>1</span><span>,</span>vet<span>[</span>MAXM<span>]</span><span>,</span>Next<span>[</span>MAXM<span>]</span><span>,</span>Head<span>[</span>MAXN<span>]</span><span>;</span>
+<span>void</span> <span>addedge</span><span>(</span><span>int</span> u<span>,</span><span>int</span> v<span>)</span><span>{</span>
+	vet<span>[</span><span>++</span>edgenum<span>]</span><span>=</span>v<span>;</span>
+	Next<span>[</span>edgenum<span>]</span><span>=</span>Head<span>[</span>u<span>]</span><span>;</span>
+	Head<span>[</span>u<span>]</span><span>=</span>edgenum<span>;</span>
+<span>}</span>
+<span>char</span> <span>Getchar</span><span>(</span><span>)</span><span>{</span>
+	<span>static</span> <span>char</span> now<span>[</span><span>1</span><span>&lt;&lt;</span><span>20</span><span>]</span><span>,</span><span>*</span>S<span>,</span><span>*</span>T<span>;</span>
+	<span>if</span> <span>(</span>T<span>==</span>S<span>)</span><span>{</span>
+		T<span>=</span><span>(</span>S<span>=</span>now<span>)</span><span>+</span><span>fread</span><span>(</span>now<span>,</span><span>1</span><span>,</span><span>1</span><span>&lt;&lt;</span><span>20</span><span>,</span><span>stdin</span><span>)</span><span>;</span>
+		<span>if</span> <span>(</span>T<span>==</span>S<span>)</span> <span>return</span> <span>EOF</span><span>;</span>
+	<span>}</span>
+	<span>return</span> <span>*</span>S<span>++</span><span>;</span>
+<span>}</span>
+<span>int</span> <span>read</span><span>(</span><span>)</span><span>{</span>
+	<span>int</span> x<span>=</span><span>0</span><span>,</span>f<span>=</span><span>1</span><span>;</span>
+	<span>char</span> ch<span>=</span><span>Getchar</span><span>(</span><span>)</span><span>;</span>
+	<span>while</span> <span>(</span>ch<span>&lt;</span><span>'0'</span><span>||</span>ch<span>></span><span>'9'</span><span>)</span><span>{</span>
+		<span>if</span> <span>(</span>ch<span>==</span><span>'-'</span><span>)</span> f<span>=</span><span>-</span><span>1</span><span>;</span>
+		ch<span>=</span><span>Getchar</span><span>(</span><span>)</span><span>;</span>
+	<span>}</span>
+	<span>while</span> <span>(</span>ch<span>&lt;=</span><span>'9'</span><span>&amp;&amp;</span>ch<span>>=</span><span>'0'</span><span>)</span> x<span>=</span>x<span>*</span><span>10</span><span>+</span>ch<span>-</span><span>'0'</span><span>,</span>ch<span>=</span><span>Getchar</span><span>(</span><span>)</span><span>;</span>
+	<span>return</span> x<span>*</span>f<span>;</span>
+<span>}</span>
+<span>void</span> <span>tarjan</span><span>(</span><span>int</span> u<span>,</span><span>int</span> le<span>)</span><span>{</span><span>//2.</span>
+	dfn<span>[</span>u<span>]</span><span>=</span>low<span>[</span>u<span>]</span><span>=</span><span>++</span>dtime<span>;</span>
+	st<span>[</span><span>++</span>top<span>]</span><span>=</span>u<span>;</span> <span>int</span> v<span>;</span>
+	<span>for</span> <span>(</span><span>int</span> e<span>=</span>Head<span>[</span>u<span>]</span><span>;</span>e<span>;</span>e<span>=</span>Next<span>[</span>e<span>]</span><span>)</span><span>{</span>
+		v<span>=</span>vet<span>[</span>e<span>]</span><span>;</span>
+		<span>if</span> <span>(</span>e<span>==</span><span>(</span>le<span>^</span><span>1</span><span>)</span><span>)</span> <span>continue</span><span>;</span>
+		<span>if</span> <span>(</span><span>!</span>dfn<span>[</span>v<span>]</span><span>)</span><span>{</span>
+			<span>tarjan</span><span>(</span>v<span>,</span>e<span>)</span><span>;</span>
+			low<span>[</span>u<span>]</span><span>=</span><span>min</span><span>(</span>low<span>[</span>u<span>]</span><span>,</span>low<span>[</span>v<span>]</span><span>)</span><span>;</span>
+		<span>}</span> <span>else</span> low<span>[</span>u<span>]</span><span>=</span><span>min</span><span>(</span>low<span>[</span>u<span>]</span><span>,</span>dfn<span>[</span>v<span>]</span><span>)</span><span>;</span>
+	<span>}</span>
+	<span>if</span> <span>(</span>dfn<span>[</span>u<span>]</span><span>==</span>low<span>[</span>u<span>]</span><span>)</span><span>{</span>
+		cnt<span>++</span><span>;</span>
+		<span>while</span> <span>(</span>st<span>[</span>top<span>]</span><span>!=</span>u<span>)</span><span>{</span> num<span>[</span>st<span>[</span>top<span>]</span><span>]</span><span>=</span>cnt<span>;</span> top<span>--</span><span>;</span><span>}</span>
+		num<span>[</span>st<span>[</span>top<span>]</span><span>]</span><span>=</span>cnt<span>;</span> top<span>--</span><span>;</span>
+	<span>}</span>
+<span>}</span>
+<span>void</span> <span>dfs</span><span>(</span><span>int</span> u<span>,</span><span>int</span> f<span>)</span><span>{</span>
+	fr<span>[</span>u<span>]</span><span>=</span>cnt2<span>;</span> dep<span>[</span>u<span>]</span><span>=</span>dep<span>[</span>f<span>]</span><span>+</span><span>1</span><span>;</span> fa<span>[</span>u<span>]</span><span>[</span><span>0</span><span>]</span><span>=</span>f<span>;</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span><span>(</span><span>1</span><span>&lt;&lt;</span>i<span>)</span><span>&lt;</span>dep<span>[</span>u<span>]</span><span>;</span>i<span>++</span><span>)</span> fa<span>[</span>u<span>]</span><span>[</span>i<span>]</span><span>=</span>fa<span>[</span>fa<span>[</span>u<span>]</span><span>[</span>i<span>-</span><span>1</span><span>]</span><span>]</span><span>[</span>i<span>-</span><span>1</span><span>]</span><span>;</span>
+	<span>for</span> <span>(</span><span>int</span> v<span>:</span>vec<span>[</span>u<span>]</span><span>)</span><span>{</span>
+		<span>if</span> <span>(</span>v<span>==</span>f<span>)</span> <span>continue</span><span>;</span>
+		<span>dfs</span><span>(</span>v<span>,</span>u<span>)</span><span>;</span>
+	<span>}</span>
+<span>}</span>
+<span>void</span> <span>dfs2</span><span>(</span><span>int</span> u<span>,</span><span>int</span> f<span>)</span><span>{</span>
+	vis<span>[</span>u<span>]</span><span>=</span><span>true</span><span>;</span>
+	<span>for</span> <span>(</span><span>int</span> v<span>:</span>vec<span>[</span>u<span>]</span><span>)</span><span>{</span>
+		<span>if</span> <span>(</span>v<span>==</span>f<span>)</span> <span>continue</span><span>;</span>
+		<span>dfs2</span><span>(</span>v<span>,</span>u<span>)</span><span>;</span>
+		up<span>[</span>u<span>]</span><span>+=</span>up<span>[</span>v<span>]</span><span>;</span> dw<span>[</span>u<span>]</span><span>+=</span>dw<span>[</span>v<span>]</span><span>;</span>
+	<span>}</span>
+<span>}</span>
+<span>int</span> <span>LCA</span><span>(</span><span>int</span> x<span>,</span><span>int</span> y<span>)</span><span>{</span>
+	<span>if</span> <span>(</span>dep<span>[</span>x<span>]</span><span>&lt;</span>dep<span>[</span>y<span>]</span><span>)</span> <span>swap</span><span>(</span>x<span>,</span>y<span>)</span><span>;</span>
+	<span>int</span> d<span>=</span>dep<span>[</span>x<span>]</span><span>-</span>dep<span>[</span>y<span>]</span><span>;</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>0</span><span>;</span>i<span>&lt;=</span><span>18</span><span>;</span>i<span>++</span><span>)</span>
+		<span>if</span> <span>(</span>d<span>&amp;</span><span>(</span><span>1</span><span>&lt;&lt;</span>i<span>)</span><span>)</span> x<span>=</span>fa<span>[</span>x<span>]</span><span>[</span>i<span>]</span><span>;</span>
+	<span>if</span> <span>(</span>x<span>==</span>y<span>)</span> <span>return</span> x<span>;</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>18</span><span>;</span>i<span>>=</span><span>0</span><span>;</span>i<span>--</span><span>)</span>
+		<span>if</span> <span>(</span>fa<span>[</span>x<span>]</span><span>[</span>i<span>]</span><span>!=</span>fa<span>[</span>y<span>]</span><span>[</span>i<span>]</span><span>)</span><span>{</span>
+			x<span>=</span>fa<span>[</span>x<span>]</span><span>[</span>i<span>]</span><span>;</span>
+			y<span>=</span>fa<span>[</span>y<span>]</span><span>[</span>i<span>]</span><span>;</span>
+		<span>}</span>
+	<span>return</span> fa<span>[</span>x<span>]</span><span>[</span><span>0</span><span>]</span><span>;</span>
+<span>}</span>
+<span>bool</span> <span>check</span><span>(</span><span>)</span><span>{</span>
+	<span>int</span> s<span>,</span>t<span>;</span>
+	<span>while</span> <span>(</span>q<span>--</span><span>)</span><span>{</span>
+		s<span>=</span><span>read</span><span>(</span><span>)</span><span>;</span> t<span>=</span><span>read</span><span>(</span><span>)</span><span>;</span>
+		s<span>=</span>num<span>[</span>s<span>]</span><span>;</span> t<span>=</span>num<span>[</span>t<span>]</span><span>;</span>
+		<span>if</span> <span>(</span>fr<span>[</span>s<span>]</span><span>!=</span>fr<span>[</span>t<span>]</span><span>)</span> <span>return</span> <span>false</span><span>;</span>
+		<span>int</span> w<span>=</span><span>LCA</span><span>(</span>s<span>,</span>t<span>)</span><span>;</span>
+		up<span>[</span>s<span>]</span><span>++</span><span>;</span> up<span>[</span>w<span>]</span><span>--</span><span>;</span>
+		dw<span>[</span>t<span>]</span><span>++</span><span>;</span> dw<span>[</span>w<span>]</span><span>--</span><span>;</span>
+	<span>}</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>n<span>;</span>i<span>++</span><span>)</span>
+		<span>if</span> <span>(</span><span>!</span>vis<span>[</span>i<span>]</span><span>)</span> <span>dfs2</span><span>(</span>i<span>,</span><span>0</span><span>)</span><span>;</span><span>//1.</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>cnt<span>;</span>i<span>++</span><span>)</span>
+		<span>if</span> <span>(</span>up<span>[</span>i<span>]</span><span>&amp;&amp;</span>dw<span>[</span>i<span>]</span><span>)</span> <span>return</span> <span>false</span><span>;</span>
+	<span>return</span> <span>true</span><span>;</span>
+<span>}</span>
+<span>int</span> <span>main</span><span>(</span><span>)</span><span>{</span>
+	n<span>=</span><span>read</span><span>(</span><span>)</span><span>;</span> m<span>=</span><span>read</span><span>(</span><span>)</span><span>;</span> q<span>=</span><span>read</span><span>(</span><span>)</span><span>;</span>
+	edgenum<span>=</span><span>1</span><span>;</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>m<span>;</span>i<span>++</span><span>)</span><span>{</span>
+		u<span>[</span>i<span>]</span><span>=</span><span>read</span><span>(</span><span>)</span><span>;</span> v<span>[</span>i<span>]</span><span>=</span><span>read</span><span>(</span><span>)</span><span>;</span>
+		<span>addedge</span><span>(</span>u<span>[</span>i<span>]</span><span>,</span>v<span>[</span>i<span>]</span><span>)</span><span>;</span> <span>addedge</span><span>(</span>v<span>[</span>i<span>]</span><span>,</span>u<span>[</span>i<span>]</span><span>)</span><span>;</span>
+	<span>}</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>n<span>;</span>i<span>++</span><span>)</span>
+		<span>if</span> <span>(</span><span>!</span>dfn<span>[</span>i<span>]</span><span>)</span> <span>tarjan</span><span>(</span>i<span>,</span><span>0</span><span>)</span><span>;</span><span>//1.</span>
+	<span>int</span> x<span>,</span>y<span>;</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>m<span>;</span>i<span>++</span><span>)</span><span>{</span>
+		x<span>=</span>num<span>[</span>u<span>[</span>i<span>]</span><span>]</span><span>;</span> y<span>=</span>num<span>[</span>v<span>[</span>i<span>]</span><span>]</span><span>;</span>
+		<span>if</span> <span>(</span>x<span>==</span>y<span>)</span> <span>continue</span><span>;</span>
+		vec<span>[</span>x<span>]</span><span>.</span><span>push_back</span><span>(</span>y<span>)</span><span>;</span>
+		vec<span>[</span>y<span>]</span><span>.</span><span>push_back</span><span>(</span>x<span>)</span><span>;</span>
+	<span>}</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>cnt<span>;</span>i<span>++</span><span>)</span>
+		<span>if</span> <span>(</span><span>!</span>fr<span>[</span>i<span>]</span><span>)</span><span>{</span> cnt2<span>++</span><span>;</span> <span>dfs</span><span>(</span>i<span>,</span><span>0</span><span>)</span><span>;</span><span>}</span><span>//1.</span>
+	<span>if</span> <span>(</span><span>check</span><span>(</span><span>)</span><span>)</span> <span>puts</span><span>(</span><span>"Yes"</span><span>)</span><span>;</span>
+	<span>else</span> <span>puts</span><span>(</span><span>"No"</span><span>)</span><span>;</span>
+	<span>return</span> <span>0</span><span>;</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>可以使用 $\rm tarjan$ 求 $LCA$ 得到更优的时间复杂度 $O(n+m+q)$。</p>
 ]]></content:encoded>
+    </item>
+    <item>
+      <title>IOI2022 部分题解</title>
+      <link>https://newzone.top/_posts/IOI2022.html</link>
+      <guid>https://newzone.top/_posts/IOI2022.html</guid>
+      <source url="https://newzone.top/rss.xml">IOI2022 部分题解</source>
+      <category>IOI2022</category>
+      <pubDate>Sat, 27 Aug 2022 13:54:17 GMT</pubDate>
+      <content:encoded><![CDATA[<p>Day2 T3 <a href="https://qoj.ac/contest/987/problem/4566" target="_blank" rel="noopener noreferrer">Thousands Islands</a> 待填。</p>
+<h3 id="catfish-farm" tabindex="-1"> <a href="https://qoj.ac/contest/986/problem/4561" target="_blank" rel="noopener noreferrer">Catfish Farm</a></h3>
+<p>第 $i$ 列哪些鱼被抓住，只和第 $i$ 列堤的高度，以及 $i-1/i+1$ 列中较高堤的高度有关。</p>
+<p>容易想到按列 dp，这样第 $i$ 列就有两种情况，较高的列是 $i-1/i+1$。</p>
+<p>这个较高没有必要，仅仅多加了限制，所以可以每个 $i$ 自由选择 $i-1/i+1$，这样如果选的不是较高的答案只会更小。</p>
+<p>我开始想的是，对于选择 $i-1$ 的，记录第 $i$ 列的高度；对于选择 $i+1$ 的，记录这列抓的鱼最高的高度。这样状态就表示算完了前 $i$ 列的答案，当前是选择 $i-1/i+1$。</p>
+<p>其实不用这样，<strong>题目要求我们每一列选择一个堤的高度，就按照题目来，状态改为表示固定完了前 $i$ 列堤的高度</strong>，当前是选择 $i-1/i+1$。选择 $i+1$ 的答案在 $i+1$ 时再计算。</p>
+<p>具体来说，记 $dp(i,j,0/1)$ 表示前 $i$ 列，堤恰好不覆盖这一列从下往上第 $j$ 条鱼，当前选择 $i+1/i-1$（当前列贡献 未计算/已计算）。对于前一列选当前列/这一列选前一列的，要算上增加的贡献。</p>
+<p>https://qoj.ac/submission/44615</p>
+<h3 id="prisoner-challenge" tabindex="-1"> <a href="https://qoj.ac/contest/986/problem/4562" target="_blank" rel="noopener noreferrer">Prisoner Challenge</a></h3>
+<p>比较大小，容易想到在二进制下<strong>按位比较</strong>。$x$ 需要记录当前存的是第几位，当前位为 $\empty/A$ 的当前位的值是多少。</p>
+<p>每次，如果当前记录的是 $A$，就拿 $B$ 这一位比较，如果相同跳到下一位，否则返回；记录的是 $\empty$，就把 $A$ 这一位记录进去。</p>
+<p>这样次数太多（大概是 $3\log n$），但是用 $B$ 比较完相同后，你其实可以知道 $B$ 下一位的信息，把 $B$ 下一位信息存进去。可以发现，比较是按照位数 $B,A,B,A$ 交替，不需要记录里面存的是 $A/B$，现在只需要记录位数和当前位的值，大概是 $2\log n$。</p>
+<p>一种思路是换进制，$k$ 进制应该是 $k\lceil\log_k n\rceil$，但还是不能通过。</p>
+<p><strong>二分和从高到低贪心填是几乎等价的。按照同样思路，可以改为每次把值域范围分成 $k$ 份，看是否在同一个值域区间</strong>，次数是 $f(n)=f(\lceil \frac n k\rceil)+k$，没区别。</p>
+<p>题目保证了两个数不同，故如果当前数为 $1$ 或 $n$ 就直接返回，把剩下的范围再分成 $k$ 份，也就是 $f(n)=f(\lceil \frac {n-2} k\rceil)+k$。</p>
+<p>把这个式子拿去 $dp$，对于不同的 $n$，$k$ 不固定，$f(n)=\min_k f(\lceil \frac {n-2} k\rceil)+k$，这样算出来 $f(5000)$ 恰好为 $20$。就按照 dp 出的方案选 $k$ 即可。</p>
+<p>https://qoj.ac/submission/45397</p>
+<h3 id="radio-towers" tabindex="-1"> <a href="https://qoj.ac/contest/986/problem/4563" target="_blank" rel="noopener noreferrer">Radio Towers</a></h3>
+<p>先考虑固定 $D$，对于选择的两个信号塔 $i,j$，中间要存在一个塔 $k$，$H_k\geq \max(H_i,H_j)+D$。</p>
+<p>可以发现只有相邻的两个选择的信号塔才需要判断。</p>
+<p>对每个 $i$，<strong>找到左右第一个 $k$，满足 $H_k\geq H_i+D$，分别记作 $L_i,R_i$。</strong></p>
+<p>$i,j$ 之间要有满足条件的塔，就要求 $R_i\leq L_j$（$i,j$ 中较大的对应的位置一定满足 $k$ 的条件），<strong>也就是区间 $[L_i,R_i)$ 两两不交。</strong></p>
+<p>同理易证区间<strong>只会有包含和不交两种情况</strong>（$D\geq 0$），对于两个位置 $i,j$，不妨假设 $H_i\geq H_j$，若 $R_i&gt;L_j$，则区间 $[L_j,R_j)$ 都不满足条件，即 $R_i\geq R_j$。</p>
+<p>不考虑询问的区间限制，$D$ 增加时，$L$ 只可能减小，$R$ 只可能增大，且根据证明，只有 $H$ 大的包含 $H$ 小的，故只会一些不是包含关系的区间变成了包含关系。</p>
+<p>按照 $D$ 从小到大，每次把所有包含其它区间的区间全部删去（维护 $i$ 对应区间包含相邻某个的最小时刻），剩下的区间个数就是当前 $D$ 能选的数量。</p>
+<p>有询问给定的区间限制 $l,r$ 时，把当前 $D$ 所有剩下的 $i$ 在 $[l,r]$ 内的个数求出来，但这样可能两边各少 $0/1$ 个区间（一个 $i$ 在 $[l,r]$ 内的，包含了一个在 $[l,r]$ 外的被删除了，实际上这个 $i$ 可以选）。</p>
+<p>如果求出来的个数不为 $0$，看其中最小的 $L$ 和最大的 $R$，看 $[l,L),(R,r]$ 内是否还能选。要求区间内 $x&lt;y,H_x-H_y$（或 $H_y-H_x$）的最大值，类似于 $ST$ 表的方法预处理即可。</p>
+<p>https://qoj.ac/submission/45344</p>
+<h3 id="digital-circuit" tabindex="-1"> <a href="https://qoj.ac/contest/987/problem/4564" target="_blank" rel="noopener noreferrer">Digital Circuit</a></h3>
+<p>必须有一个叶子节点到根一路都是黑色，但是直接计数会<strong>算重</strong>。</p>
+<p><strong>要每一种方案对应唯一的叶子节点（相当于添加了限制条件）。</strong></p>
+<p>树的形态固定，由于根节点为黑色，说明儿子里至少有 $p$（参数）个是黑色，那么选择其中的第 $p$ 个黑色儿子，往下走。</p>
+<p>最终会走到一个叶子节点，则设这种方案对应这个叶子节点。</p>
+<p>现在考虑每个叶子节点 $x$，算对应到它的方案的数量。首先它到根的都必须是黑色，<strong>此外其它点的参数毫无关系，因为固定其它点的参数后其它点的颜色固定后，要求对应到的是 $x$，则 $x$ 到根路径的所有的参数是唯一确定的。</strong></p>
+<p>对每个叶子节点预处理出到根路径外的点的参数选择的方案数。线段树支持区间取反操作，维护所有黑色叶子节点的方案数之和即可。</p>
+<p>https://qoj.ac/submission/45436</p>
+<h3 id="rarest-insects" tabindex="-1"> <a href="https://qoj.ac/contest/987/problem/4565" target="_blank" rel="noopener noreferrer">Rarest Insects</a></h3>
+<p>把不同的数放在不同的列，这个东西很像一个柱形图（？）</p>
+<p>一种思路是每次删掉一行（删掉所有出现过的数各一次，需保证数量始终为 $1$），次数是行数（最多数出现次数）$\times n$。</p>
+<p>另一种思路是每次删掉一列（删掉某种数的所有出现，需保证数量每次必须加 $1$），次数是列数（数字种数）$\times n$。</p>
+<p>两种各做 $\sqrt n$ 次后一定能删完（数字总数为 $n$）。这样是 $O(n\sqrt n)$ 次。没什么优化空间。</p>
+<p>第一种思路其实可以扩展成每次删掉 $r$ 行，需保证数量始终不超过 $r$ 即可。</p>
+<p>求出数字种类数 $c$。考虑二分答案（上界 $\frac nc$），用第一种思路来 check 当前答案 $mid$，是 $O(n\log n)$ 次。</p>
+<p>这个可以继续优化，如果 check 成功了（加入了 $mid\times c$ 个数），已经加入的数之后就不需要加了；如果 check 失败了，未加入的数之后也不可能加。</p>
+<p>这样每次数量接近减半（有个上取整），次数共 $2n$ 左右。再加上外面求种类数的 $n$，总次数 $3n$ 左右。</p>
+<p>这样一交得了 99.89 分，再加点优化，比如已经达到 $mid\times c$ 之后的就不需要尝试加入了，再 shuffle 一下序列防止被卡，就通过了。</p>
+<p>不知道有没有不用随机化严格在 $3n$ 内的做法？</p>
+<p>https://qoj.ac/submission/45454</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>NOIP2021 方差</title>
+      <link>https://newzone.top/_posts/NOIP21T3.html</link>
+      <guid>https://newzone.top/_posts/NOIP21T3.html</guid>
+      <source url="https://newzone.top/rss.xml">NOIP2021 方差</source>
+      <category>NOIP2021</category>
+      <pubDate>Sun, 21 Nov 2021 13:06:35 GMT</pubDate>
+      <content:encoded><![CDATA[<p>$$
+\begin{align*}
+n\overline{a}&amp;=\sum_{i=1}^na_i\
+\
+n^2D
+&amp;=n\sum_{i=1}^n(a_i-\overline{a})^2\
+&amp;=n\sum_{i=1}^n a_i^2-2n\overline{a}\sum_{i=1}^n a_i+n^2\overline{a}^2\
+&amp;=n\sum_{i=1}^n a_i^2-2(\sum_{i=1}^n a_i)^2+(\sum_{i=1}^n a_i)^2\
+&amp;=n\sum_{i=1}^n a_i^2-(\sum_{i=1}^n a_i)^2\
+\end{align*}
+$$</p>
+<p>观察题目中的式子，$a'<em>i\leftarrow a</em>{i-1}+a_{i+1}-a_i$，根据 CF1110E 的套路，可以差分，令 $d_i=a_{i+1}-a_i(1\leq i\lt n)$，一次操作 $(2\leq i\lt n)$ 即：</p>
+<p>$$
+d'<em>{i-1}=a'</em>{i}-a'<em>{i-1}=(a</em>{i-1}+a_{i+1}-a_i)-a_{i-1}=a_{i+1}-a_i=d_i\
+d'<em>i=a'</em>{i+1}-a'<em>{i}=a</em>{i+1}-(a_{i-1}+a_{i+1}-a_i)=a_i-a_{i-1}=d_{i-1}
+$$</p>
+<p>相当于交换 $d_{i-1},d_i(2\leq i\lt n)$，故 $d$ 可以通过若干次操作，变为任意 $d$ 的排列。</p>
+<p>由于 $a_1$ 不变，那么 $a$ 和 $d$ 是一一对应的。现在要求一个 $d$ 的排列使得 $n^2D$ 最小，继续推式子：
+$$
+\begin{align*}
+n^2D
+&amp;=n\sum_{i=1}^n a_i^2-(\sum_{i=1}^n a_i)^2\
+&amp;=n\sum_{i=1}^n a_i^2-\sum_{i=1}^n\sum_{j=1}^na_ia_j\
+&amp;=\frac{1}{2}(n\sum_{i=1}^n a_i^2-2\sum_{i=1}^n\sum_{j=1}^na_ia_j+n\sum_{j=1}^n a_j^2)\
+&amp;=\frac{1}{2}(\sum_{i=1}^n\sum_{j=1}^n(a_i-a_j)^2)\
+&amp;=\sum_{i=1}^{n-1}\sum_{j=i}^{n-1}(a_{j+1}-a_i)^2\
+&amp;=\sum_{i=1}^{n-1}\sum_{j=i}^{n-1}(d_i+d_{i+1}+\cdots+d_j)^2\
+\end{align*}
+$$
+$n^2D$ 取最小值时，$d$ 一定是先递减后递增的。</p>
+<p>考虑在分界位置（即递减到递增）从小到大往两边加数，由于
+$$
+\begin{align*}
+n^2D
+&amp;=n\sum_{i=1}^n a_i^2-(\sum_{i=1}^n a_i)^2\
+\end{align*}
+$$
+维护 $dp[k][s]$ 表示当前已经加入了 $k$ 个数，现在的 $a$ 之和为 $s$ 的最小 $\displaystyle \sum_{i=1}^n a_i^2$。</p>
+<p>初始 $dp[1][s]=0$。</p>
+<p>转移时考虑加到左边还是右边：</p>
+<ul>
+<li>左边：原来是 $a_1,a_2,\cdots,a_k$，现在变为 $d,a_1+d,a_2+d,\cdots,a_k+d$，新增的贡献为</li>
+</ul>
+<p>$$
+\begin{align*}
+\Delta
+&amp;=d^2+\sum_{i=1}^k (d+a_i)^2-\sum_{i=1}^k a_i^2\
+&amp;=(k+1)d^2+2d\sum_{i=1}^ka_i\
+&amp;=(k+1)d^2+2ds\
+\end{align*}
+$$</p>
+<ul>
+<li>右边：原来是 $a_1,a_2,\cdots,a_k$，现在变为 $a_1,a_2,\cdots,a_k,a_k+d$，新增的贡献为
+$$
+\begin{align*}
+\Delta
+&amp;=(a_k+d)^2\
+\end{align*}
+$$
+其实可以发现 $a_k$ 是固定的，为之前所有的 $d$ 之和，不需要再记录。</li>
+</ul>
+<p>答案为 $\displaystyle \min_s{n\times dp[n][s]-s^2}$。</p>
+<p>分析一下时间复杂度，第一维是 $O(n)$ 的，第二维是 $O(nV)$ 的，转移 $O(1)$。</p>
+<p>但是可以发现 $d$ 为 $0$ 的转移可以忽略，第一维是 $O(\min(n,V))$ 的，总复杂度为 $O(nV^2)$，可以通过。</p>
+<div><pre><code><span><span>#</span><span>include</span><span>&lt;bits/stdc++.h></span></span>
+<span>using</span> <span>namespace</span> std<span>;</span>
+<span>typedef</span> <span>long</span> <span>long</span> ll<span>;</span>
+<span>const</span> ll INF<span>=</span><span>1ll</span><span>&lt;&lt;</span><span>60</span><span>;</span>
+<span>int</span> n<span>,</span>a<span>[</span><span>11000</span><span>]</span><span>,</span>d<span>[</span><span>11000</span><span>]</span><span>;</span> ll dp<span>[</span><span>510000</span><span>]</span><span>;</span>
+ll <span>sqr</span><span>(</span>ll x<span>)</span><span>{</span> <span>return</span> x<span>*</span>x<span>;</span><span>}</span>
+<span>int</span> <span>main</span><span>(</span><span>)</span><span>{</span>
+	<span>scanf</span><span>(</span><span>"%d"</span><span>,</span><span>&amp;</span>n<span>)</span><span>;</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>n<span>;</span>i<span>++</span><span>)</span> <span>scanf</span><span>(</span><span>"%d"</span><span>,</span><span>&amp;</span>a<span>[</span>i<span>]</span><span>)</span><span>;</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;</span>n<span>;</span>i<span>++</span><span>)</span> d<span>[</span>i<span>]</span><span>=</span>a<span>[</span>i<span>+</span><span>1</span><span>]</span><span>-</span>a<span>[</span>i<span>]</span><span>;</span>
+	<span>sort</span><span>(</span>d<span>+</span><span>1</span><span>,</span>d<span>+</span>n<span>)</span><span>;</span>
+	
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>0</span><span>;</span>i<span>&lt;=</span><span>500000</span><span>;</span>i<span>++</span><span>)</span> dp<span>[</span>i<span>]</span><span>=</span>INF<span>;</span>
+	dp<span>[</span><span>0</span><span>]</span><span>=</span><span>0</span><span>;</span> <span>int</span> lim<span>=</span><span>0</span><span>,</span>sum<span>=</span><span>0</span><span>;</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;</span>n<span>;</span>i<span>++</span><span>)</span><span>{</span>
+		<span>if</span> <span>(</span><span>!</span>d<span>[</span>i<span>]</span><span>)</span> <span>continue</span><span>;</span>
+		<span>for</span> <span>(</span><span>int</span> s<span>=</span>lim<span>;</span>s<span>>=</span><span>0</span><span>;</span>s<span>--</span><span>)</span><span>{</span>
+			<span>if</span> <span>(</span>dp<span>[</span>s<span>]</span><span>==</span>INF<span>)</span> <span>continue</span><span>;</span>
+			dp<span>[</span>s<span>+</span>sum<span>+</span>d<span>[</span>i<span>]</span><span>]</span><span>=</span><span>min</span><span>(</span>dp<span>[</span>s<span>+</span>sum<span>+</span>d<span>[</span>i<span>]</span><span>]</span><span>,</span>dp<span>[</span>s<span>]</span><span>+</span><span>sqr</span><span>(</span>sum<span>+</span>d<span>[</span>i<span>]</span><span>)</span><span>)</span><span>;</span>
+			dp<span>[</span>s<span>+</span>i<span>*</span>d<span>[</span>i<span>]</span><span>]</span><span>=</span><span>min</span><span>(</span>dp<span>[</span>s<span>+</span>i<span>*</span>d<span>[</span>i<span>]</span><span>]</span><span>,</span>dp<span>[</span>s<span>]</span><span>+</span><span>2</span><span>*</span>s<span>*</span>d<span>[</span>i<span>]</span><span>+</span>i<span>*</span><span>sqr</span><span>(</span>d<span>[</span>i<span>]</span><span>)</span><span>)</span><span>;</span>
+			dp<span>[</span>s<span>]</span><span>=</span>INF<span>;</span>
+		<span>}</span>
+		lim<span>+=</span>i<span>*</span>d<span>[</span>i<span>]</span><span>;</span> sum<span>+=</span>d<span>[</span>i<span>]</span><span>;</span>
+	<span>}</span>
+	ll ans<span>=</span>INF<span>;</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>0</span><span>;</span>i<span>&lt;=</span>lim<span>;</span>i<span>++</span><span>)</span>
+		<span>if</span> <span>(</span>dp<span>[</span>i<span>]</span><span>!=</span>INF<span>)</span> ans<span>=</span><span>min</span><span>(</span>ans<span>,</span>n<span>*</span>dp<span>[</span>i<span>]</span><span>-</span><span>1ll</span><span>*</span>i<span>*</span>i<span>)</span><span>;</span>
+	<span>printf</span><span>(</span><span>"%lld\n"</span><span>,</span>ans<span>)</span><span>;</span>
+	<span>return</span> <span>0</span><span>;</span>
+<span>}</span>
+
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>UOJ681</title>
+      <link>https://newzone.top/_posts/UOJ681.html</link>
+      <guid>https://newzone.top/_posts/UOJ681.html</guid>
+      <source url="https://newzone.top/rss.xml">UOJ681</source>
+      <description>
+给定 $n$ 个数字 $a_1,a_2,\cdots,a_n$。
+$m$ 次询问，每次询问给定 $x$，求 $\oplus_{i=1}^n (a_i+x)$ 的值。
+强制在线。
+$1\leq n,m\leq 2.5\times 10^5,0\leq a_i,x\lt 2^{60}$。
+
+</description>
+      <category>UOJ</category>
+      <pubDate>Sun, 03 Oct 2021 21:13:35 GMT</pubDate>
+      <content:encoded><![CDATA[<ul>
+<li>给定 $n$ 个数字 $a_1,a_2,\cdots,a_n$。</li>
+<li>$m$ 次询问，每次询问给定 $x$，求 $\oplus_{i=1}^n (a_i+x)$ 的值。</li>
+<li>强制在线。</li>
+<li>$1\leq n,m\leq 2.5\times 10^5,0\leq a_i,x\lt 2^{60}$。</li>
+</ul>
+
+<h3 id="sol" tabindex="-1"> sol</h3>
+<ul>
+<li>
+<p>由于每个 $a_i$ 加的都是 $x$，所以向第 $w$ 位进位的一定是后 $w-1$ 位 $a_i$ 最大的若干个数。</p>
+</li>
+<li>
+<p>从低到高考虑每一位。讨论 $x$ 当前这一位是 $0$ 还是 $1$。</p>
+</li>
+<li>
+<p>如果当前位为 0：</p>
+<ul>
+<li>$a_i+x$ 当前位为 $1$ 的数量：进位为 $0$ 且 $x$ 当前位为 $1$ 的数量 + 进位为 $1$ 且 $x$ 当前位为 $0$ 的数量；</li>
+<li>$a_i+x$ 向前进位的数量：进位为 $1$ 且 $x$ 当前位为 $1$ 的数量。</li>
+</ul>
+</li>
+<li>
+<p>如果当前位为 1：</p>
+<ul>
+<li>$a_i+x$ 当前位为 $1$ 的数量：进位为 $1$ 且 $x$ 当前位为 $1$ 的数量 + 进位为 $0$ 且 $x$ 当前位为 $0$ 的数量；</li>
+<li>$a_i+x$ 没向前进位的数量：进位为 $0$ 且 $x$ 当前位为 $0$ 的数量，向前进位的数量用 $n$ 减去即可。</li>
+</ul>
+</li>
+<li>
+<p>记 $sum[0/1][w][i]$ 为考虑后 $w-1$ 位有 $i$ 个数进位，第 $i$ 位没进位/进位的数的个数。</p>
+</li>
+<li>
+<p>可以用基数排序优化每次的排序。</p>
+</li>
+</ul>
+<div><pre><code><span><span>#</span><span>include</span><span>&lt;bits/stdc++.h></span></span>
+<span>using</span> <span>namespace</span> std<span>;</span>
+<span>typedef</span> <span>long</span> <span>long</span> ll<span>;</span>
+<span>const</span> ll INF<span>=</span><span>1ll</span><span>&lt;&lt;</span><span>60</span><span>;</span>
+<span>int</span> n<span>,</span>m<span>,</span>t<span>,</span>sum<span>[</span><span>2</span><span>]</span><span>[</span><span>64</span><span>]</span><span>[</span><span>260000</span><span>]</span><span>,</span>tmp<span>[</span><span>2</span><span>]</span><span>[</span><span>260000</span><span>]</span><span>,</span>p<span>[</span><span>260000</span><span>]</span><span>;</span>
+ll ans<span>,</span>v<span>,</span>a<span>[</span><span>260000</span><span>]</span><span>;</span>
+<span>int</span> <span>main</span><span>(</span><span>)</span><span>{</span>
+	<span>scanf</span><span>(</span><span>"%d%d%d"</span><span>,</span><span>&amp;</span>n<span>,</span><span>&amp;</span>m<span>,</span><span>&amp;</span>t<span>)</span><span>;</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>n<span>;</span>i<span>++</span><span>)</span> <span>scanf</span><span>(</span><span>"%lld"</span><span>,</span><span>&amp;</span>a<span>[</span>i<span>]</span><span>)</span><span>,</span>p<span>[</span>i<span>]</span><span>=</span>i<span>;</span>
+	<span>for</span> <span>(</span><span>int</span> w<span>=</span><span>0</span><span>;</span>w<span>&lt;</span><span>62</span><span>;</span>w<span>++</span><span>)</span><span>{</span>
+		tmp<span>[</span><span>0</span><span>]</span><span>[</span><span>0</span><span>]</span><span>=</span><span>0</span><span>;</span> tmp<span>[</span><span>1</span><span>]</span><span>[</span><span>0</span><span>]</span><span>=</span><span>0</span><span>;</span>
+		<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>n<span>;</span>i<span>++</span><span>)</span><span>{</span>
+			<span>int</span> x<span>=</span><span>(</span>a<span>[</span>p<span>[</span>i<span>]</span><span>]</span><span>>></span>w<span>)</span><span>&amp;</span><span>1</span><span>;</span> tmp<span>[</span>x<span>]</span><span>[</span><span>++</span>tmp<span>[</span>x<span>]</span><span>[</span><span>0</span><span>]</span><span>]</span><span>=</span>p<span>[</span>i<span>]</span><span>;</span>
+			sum<span>[</span><span>0</span><span>]</span><span>[</span>w<span>]</span><span>[</span>i<span>]</span><span>=</span>tmp<span>[</span><span>0</span><span>]</span><span>[</span><span>0</span><span>]</span><span>;</span> sum<span>[</span><span>1</span><span>]</span><span>[</span>w<span>]</span><span>[</span>i<span>]</span><span>=</span>tmp<span>[</span><span>1</span><span>]</span><span>[</span><span>0</span><span>]</span><span>;</span>
+		<span>}</span>
+		<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>tmp<span>[</span><span>0</span><span>]</span><span>[</span><span>0</span><span>]</span><span>;</span>i<span>++</span><span>)</span> p<span>[</span>i<span>]</span><span>=</span>tmp<span>[</span><span>0</span><span>]</span><span>[</span>i<span>]</span><span>;</span>
+		<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>tmp<span>[</span><span>1</span><span>]</span><span>[</span><span>0</span><span>]</span><span>;</span>i<span>++</span><span>)</span> p<span>[</span>i<span>+</span>tmp<span>[</span><span>0</span><span>]</span><span>[</span><span>0</span><span>]</span><span>]</span><span>=</span>tmp<span>[</span><span>1</span><span>]</span><span>[</span>i<span>]</span><span>;</span>
+	<span>}</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>m<span>;</span>i<span>++</span><span>)</span><span>{</span>
+		<span>scanf</span><span>(</span><span>"%lld"</span><span>,</span><span>&amp;</span>v<span>)</span><span>;</span> v<span>^=</span><span>(</span>t<span>*</span><span>(</span>ans<span>>></span><span>20</span><span>)</span><span>)</span><span>;</span>
+		<span>int</span> x<span>=</span><span>0</span><span>;</span> ans<span>=</span><span>0</span><span>;</span>
+		<span>for</span> <span>(</span><span>int</span> w<span>=</span><span>0</span><span>;</span>w<span>&lt;</span><span>62</span><span>;</span>w<span>++</span><span>)</span>
+			<span>if</span> <span>(</span><span>(</span>v<span>>></span>w<span>)</span><span>&amp;</span><span>1</span><span>)</span><span>{</span>
+				ans<span>^=</span><span>(</span><span>(</span><span>(</span>sum<span>[</span><span>1</span><span>]</span><span>[</span>w<span>]</span><span>[</span>n<span>]</span><span>-</span>sum<span>[</span><span>1</span><span>]</span><span>[</span>w<span>]</span><span>[</span>n<span>-</span>x<span>]</span><span>)</span><span>+</span>sum<span>[</span><span>0</span><span>]</span><span>[</span>w<span>]</span><span>[</span>n<span>-</span>x<span>]</span><span>)</span><span>&amp;</span><span>1ll</span><span>)</span><span>&lt;&lt;</span>w<span>;</span>
+				x<span>=</span>n<span>-</span>sum<span>[</span><span>0</span><span>]</span><span>[</span>w<span>]</span><span>[</span>n<span>-</span>x<span>]</span><span>;</span>
+			<span>}</span> <span>else</span><span>{</span>
+				ans<span>^=</span><span>(</span><span>(</span><span>(</span>sum<span>[</span><span>0</span><span>]</span><span>[</span>w<span>]</span><span>[</span>n<span>]</span><span>-</span>sum<span>[</span><span>0</span><span>]</span><span>[</span>w<span>]</span><span>[</span>n<span>-</span>x<span>]</span><span>)</span><span>+</span>sum<span>[</span><span>1</span><span>]</span><span>[</span>w<span>]</span><span>[</span>n<span>-</span>x<span>]</span><span>)</span><span>&amp;</span><span>1ll</span><span>)</span><span>&lt;&lt;</span>w<span>;</span>
+				x<span>=</span>sum<span>[</span><span>1</span><span>]</span><span>[</span>w<span>]</span><span>[</span>n<span>]</span><span>-</span>sum<span>[</span><span>1</span><span>]</span><span>[</span>w<span>]</span><span>[</span>n<span>-</span>x<span>]</span><span>;</span>
+			<span>}</span>
+		<span>printf</span><span>(</span><span>"%lld\n"</span><span>,</span>ans<span>)</span><span>;</span>
+	<span>}</span>
+	<span>return</span> <span>0</span><span>;</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>UOJ682</title>
+      <link>https://newzone.top/_posts/UOJ682.html</link>
+      <guid>https://newzone.top/_posts/UOJ682.html</guid>
+      <source url="https://newzone.top/rss.xml">UOJ682</source>
+      <description>
+给定 $n$ 和序列 $a_1,a_2,\cdots,a_n$，$b_1,b_2,\cdots b_n$。
+定义一个区间 $[l,r]$ 的权值为：对于所有满足 $p_i\in {a_i,b_i}$，$\oplus_{i=l}^r p_i$ 的序列 $p_1,p_2,\cdots p_n$ 的最大值。
+求左右端点满足 $1\leq l\leq r\leq n$ 的区间中，第 $k$ 小的权值是多少（可重）。
+$1\leq n\leq 10^5,0\leq a_i,b_i\lt 2^{30},1\leq k\leq \frac{n(n+1)}2$。
+
+</description>
+      <category>UOJ</category>
+      <pubDate>Tue, 05 Oct 2021 22:01:02 GMT</pubDate>
+      <content:encoded><![CDATA[<ul>
+<li>给定 $n$ 和序列 $a_1,a_2,\cdots,a_n$，$b_1,b_2,\cdots b_n$。</li>
+<li>定义一个区间 $[l,r]$ 的权值为：对于所有满足 $p_i\in {a_i,b_i}$，$\oplus_{i=l}^r p_i$ 的序列 $p_1,p_2,\cdots p_n$ 的最大值。</li>
+<li>求左右端点满足 $1\leq l\leq r\leq n$ 的区间中，第 $k$ 小的权值是多少（可重）。</li>
+<li>$1\leq n\leq 10^5,0\leq a_i,b_i\lt 2^{30},1\leq k\leq \frac{n(n+1)}2$。</li>
+</ul>
+
+<h3 id="sol" tabindex="-1"> sol</h3>
+<h4 id="初步思考" tabindex="-1"> 初步思考</h4>
+<ul>
+<li>这种题目比较容易想到线性基。</li>
+<li>但是线性基是其中每个数都可以选或不选，而这题是类似于连续区间二选一。</li>
+<li>线性基就不能做了吗？当然不是，假设刚开始全部选 $a$，那么选择一些位置把它变成 $b$ 这种类型就是线性基能做的了。</li>
+</ul>
+<h4 id="问题转化" tabindex="-1"> 问题转化</h4>
+<ul>
+<li>记 $c_i=a_i\oplus b_i,s_i=\oplus_{j=1}^i a_j$，区间 $[l,r]$ 的权值转化为：$s_r\oplus s_{l-1}$ 再异或上若干个 $c_i$ 的最大值。</li>
+<li>线性基求和 $x$ 异或的最大值的方法为：从高到低枚举每一位，若这一位 $x$ 为 $0$，则异或上线性基上这一位的数。</li>
+<li>设 $f(x,T)=\max_{y\in T}(x\oplus y)$，其中 $x$ 是一个数，$T$ 是一个线性基。</li>
+<li>暴力做法：固定左端点 $l$，移动右端点 $r$ 时维护线性基 $T$，求出每个区间的权值 $f(s_r\oplus s_{l-1},T)$，最后求第 $k$ 小值。</li>
+</ul>
+<h4 id="继续思考" tabindex="-1"> 继续思考</h4>
+<ul>
+<li>
+<p>考虑优化暴力做法。固定左端点，由于线性基维数不超过 $m$，故不同的右端点本质不同的线性基至多有 $m+1$ 种（即维数分别为 $0,1,\cdots m$）。移动右端点时，线性基维数可能增加 $1$，也有可能不增加。</p>
+</li>
+<li>
+<p>考虑改为：对于右端点 $r$，维护所有左端点为 $1,2,\cdots,r$ 的线性基。右端点从 $r-1$ 移动到 $r$ 时，一定是一个后缀 $p,p+1,\cdots,r$ 的线性基维数 $+1$，可以直接暴力更新，复杂度 $O(nm^2)$。</p>
+</li>
+<li>
+<p>现在求的 $f(s_r\oplus s_{l-1},T_{l,r})$ 和 $l,r$ 都有关，虽然在移动右端点时维护出了不同的 $T$，但是带入无法解决。</p>
+</li>
+<li>
+<p>设 $g(x,T)=\min_{y\in T}(x\oplus y)$，由于 $f$ 相当于 $x$ 某位为 $1$ 就异或那一位的线性基上的值，$g$ 相当于 $x$ 某位为 $0$ 就异或那一位的线性基上的值，那么 $f(s_r\oplus s_{l-1},T_{l,r})$ 等于 $f(s_r,T_{l,r})\oplus g(s_{l-1},T_{l,r})$。</p>
+</li>
+<li>
+<p>现在 $T_{l,r}$ 可以增量维护，和右端点移动无关的 $f(s_r\oplus s_{l-1},T_{l,r})$ 就能维护了，而和右端点移动有关的 $g(s_r,T_{l,r})\oplus g(s_{l-1},T_{l,r})$ 由于本质不同的只有最多 $m$ 个，所以可以每次暴力重新求。</p>
+</li>
+</ul>
+<h4 id="上述实现" tabindex="-1"> 上述实现</h4>
+<ul>
+<li>
+<p>$lv[x][l]$ 表示基大小为 $x$，左端点为 $l$ 时代入 $s[l-1]$ 的最小值。</p>
+</li>
+<li>
+<p>$rv[x][r]$ 表示基大小为 $x$，右端点为 $r$ 时代入 $s[r]$ 的最大值。</p>
+</li>
+<li>
+<p>$lp[x][r]/rp[x][r]$ 表示基大小为 $x$，右端点为 $r$ 时左端点合法区间的左右端点。</p>
+</li>
+<li>
+<p>具体来说，$lv$ 可以通过暴力往左枚举左端点，加入当前数扩大线性基，直到发现当前左端点当前数不能扩大线性基就停止。$rv/lp/rp$ 可以维护满足 $i..r$ 基大小为 $x$ 的最大的 $r$，在这些位置加入当前数扩大线性基合并。</p>
+</li>
+</ul>
+<h4 id="求解答案" tabindex="-1"> 求解答案</h4>
+<ul>
+<li>二进制从高到低确定每一位，假设当前确定到从高到低第 $w$ 位。</li>
+<li>枚举基大小，对于不同的右端点，求出合法左端点区间中，$g$ 和当前右端点 $f$ 值前 $w$ 位相同的数的数量，具体实现使用 <code>two-pointers</code>。</li>
+<li>求和后和 $k$ 比较，如果 $&lt;k$，说明答案这位为 $1$，将 $k$ 减去当前数量，并将所有 $f$ 的这一位异或（即之后要找这一位不同的）。</li>
+</ul>
+<div><pre><code><span>//40pts</span>
+<span><span>#</span><span>include</span><span>&lt;bits/stdc++.h></span></span>
+<span>using</span> <span>namespace</span> std<span>;</span>
+<span>typedef</span> <span>long</span> <span>long</span> ll<span>;</span>
+<span>const</span> <span>int</span> m<span>=</span><span>30</span><span>;</span>
+<span>int</span> n<span>,</span>a<span>[</span><span>110000</span><span>]</span><span>,</span>b<span>[</span><span>110000</span><span>]</span><span>,</span>c<span>[</span><span>110000</span><span>]</span><span>,</span>s<span>[</span><span>110000</span><span>]</span><span>;</span> ll k<span>;</span>
+<span>int</span> lv<span>[</span><span>32</span><span>]</span><span>[</span><span>110000</span><span>]</span><span>,</span>rv<span>[</span><span>32</span><span>]</span><span>[</span><span>110000</span><span>]</span><span>,</span>lp<span>[</span><span>32</span><span>]</span><span>[</span><span>110000</span><span>]</span><span>,</span>rp<span>[</span><span>32</span><span>]</span><span>[</span><span>110000</span><span>]</span><span>,</span>v<span>[</span><span>32</span><span>]</span><span>[</span><span>110000</span><span>]</span><span>;</span>
+unordered_map<span>&lt;</span><span>int</span><span>,</span><span>int</span><span>></span> mp<span>;</span>
+<span>struct</span> <span>Basis</span><span>{</span>
+	<span>int</span> tot<span>,</span>v<span>[</span><span>32</span><span>]</span><span>;</span>
+	<span>Basis</span><span>(</span><span>)</span><span>{</span> tot<span>=</span><span>0</span><span>;</span> <span>memset</span><span>(</span>v<span>,</span><span>0</span><span>,</span><span>sizeof</span><span>(</span>v<span>)</span><span>)</span><span>;</span><span>}</span>
+	<span>bool</span> <span>ins</span><span>(</span><span>int</span> x<span>)</span><span>{</span>
+		<span>for</span> <span>(</span><span>int</span> i<span>=</span>m<span>-</span><span>1</span><span>;</span>i<span>>=</span><span>0</span><span>;</span>i<span>--</span><span>)</span>
+			<span>if</span> <span>(</span><span>(</span>x<span>>></span>i<span>)</span><span>&amp;</span><span>1</span><span>)</span> x<span>^=</span>v<span>[</span>i<span>]</span><span>;</span>
+		<span>for</span> <span>(</span><span>int</span> i<span>=</span>m<span>-</span><span>1</span><span>;</span>i<span>>=</span><span>0</span><span>;</span>i<span>--</span><span>)</span>
+			<span>if</span> <span>(</span><span>(</span>x<span>>></span>i<span>)</span><span>&amp;</span><span>1</span><span>)</span><span>{</span>
+				v<span>[</span>i<span>]</span><span>=</span>x<span>;</span> tot<span>++</span><span>;</span>
+				<span>for</span> <span>(</span><span>int</span> j<span>=</span>m<span>-</span><span>1</span><span>;</span>j<span>></span>i<span>;</span>j<span>--</span><span>)</span>
+					<span>if</span> <span>(</span><span>(</span>v<span>[</span>j<span>]</span><span>>></span>i<span>)</span><span>&amp;</span><span>1</span><span>)</span> v<span>[</span>j<span>]</span><span>^=</span>x<span>;</span>
+				<span>return</span> <span>true</span><span>;</span>
+			<span>}</span>
+		<span>return</span> <span>false</span><span>;</span>
+	<span>}</span>
+	<span>int</span> <span>querymax</span><span>(</span><span>int</span> x<span>)</span><span>{</span>
+		<span>for</span> <span>(</span><span>int</span> i<span>=</span>m<span>-</span><span>1</span><span>;</span>i<span>>=</span><span>0</span><span>;</span>i<span>--</span><span>)</span>
+			<span>if</span> <span>(</span><span>!</span><span>(</span><span>(</span>x<span>>></span>i<span>)</span><span>&amp;</span><span>1</span><span>)</span><span>)</span> x<span>^=</span>v<span>[</span>i<span>]</span><span>;</span>
+		<span>return</span> x<span>;</span>
+	<span>}</span>
+	<span>int</span> <span>querymin</span><span>(</span><span>int</span> x<span>)</span><span>{</span>
+		<span>for</span> <span>(</span><span>int</span> i<span>=</span>m<span>-</span><span>1</span><span>;</span>i<span>>=</span><span>0</span><span>;</span>i<span>--</span><span>)</span>
+			<span>if</span> <span>(</span><span>(</span>x<span>>></span>i<span>)</span><span>&amp;</span><span>1</span><span>)</span> x<span>^=</span>v<span>[</span>i<span>]</span><span>;</span>
+		<span>return</span> x<span>;</span>
+	<span>}</span>
+<span>}</span> A<span>[</span><span>110000</span><span>]</span><span>,</span>B<span>[</span><span>110000</span><span>]</span><span>;</span>
+vector<span>&lt;</span><span>int</span><span>></span> p<span>,</span>q<span>;</span>
+<span>void</span> <span>upd</span><span>(</span><span>int</span> i<span>)</span><span>{</span>
+	A<span>[</span>i<span>]</span><span>.</span><span>ins</span><span>(</span>c<span>[</span>i<span>]</span><span>)</span><span>;</span> <span>for</span> <span>(</span><span>int</span> x<span>:</span>p<span>)</span> A<span>[</span>x<span>]</span><span>.</span><span>ins</span><span>(</span>c<span>[</span>i<span>]</span><span>)</span><span>;</span>
+	q<span>=</span>p<span>;</span> p<span>.</span><span>clear</span><span>(</span><span>)</span><span>;</span> p<span>.</span><span>push_back</span><span>(</span>i<span>)</span><span>;</span>
+	<span>for</span> <span>(</span><span>int</span> x<span>:</span>q<span>)</span>
+		<span>if</span> <span>(</span>A<span>[</span>x<span>]</span><span>.</span>tot<span>></span>A<span>[</span>p<span>.</span><span>back</span><span>(</span><span>)</span><span>]</span><span>.</span>tot<span>)</span> p<span>.</span><span>push_back</span><span>(</span>x<span>)</span><span>;</span>
+<span>}</span>
+<span>int</span> <span>main</span><span>(</span><span>)</span><span>{</span>
+	<span>scanf</span><span>(</span><span>"%d%lld"</span><span>,</span><span>&amp;</span>n<span>,</span><span>&amp;</span>k<span>)</span><span>;</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>n<span>;</span>i<span>++</span><span>)</span><span>{</span>
+		<span>scanf</span><span>(</span><span>"%d"</span><span>,</span><span>&amp;</span>a<span>[</span>i<span>]</span><span>)</span><span>;</span>
+		s<span>[</span>i<span>]</span><span>=</span>s<span>[</span>i<span>-</span><span>1</span><span>]</span><span>^</span>a<span>[</span>i<span>]</span><span>;</span>
+	<span>}</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>n<span>;</span>i<span>++</span><span>)</span><span>{</span>
+		<span>scanf</span><span>(</span><span>"%d"</span><span>,</span><span>&amp;</span>b<span>[</span>i<span>]</span><span>)</span><span>;</span>
+		c<span>[</span>i<span>]</span><span>=</span>a<span>[</span>i<span>]</span><span>^</span>b<span>[</span>i<span>]</span><span>;</span>
+	<span>}</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>n<span>;</span>i<span>++</span><span>)</span><span>{</span>
+		<span>for</span> <span>(</span><span>int</span> j<span>=</span>i<span>;</span>j<span>>=</span><span>1</span><span>&amp;&amp;</span><span>(</span>B<span>[</span>j<span>]</span><span>.</span><span>ins</span><span>(</span>c<span>[</span>i<span>]</span><span>)</span><span>||</span>i<span>==</span>j<span>)</span><span>;</span>j<span>--</span><span>)</span>
+			lv<span>[</span>B<span>[</span>j<span>]</span><span>.</span>tot<span>]</span><span>[</span>j<span>]</span><span>=</span>B<span>[</span>j<span>]</span><span>.</span><span>querymin</span><span>(</span>s<span>[</span>j<span>-</span><span>1</span><span>]</span><span>)</span><span>;</span>
+		<span>upd</span><span>(</span>i<span>)</span><span>;</span>
+		<span>for</span> <span>(</span><span>int</span> j<span>=</span><span>0</span><span>;</span>j<span>&lt;</span><span>(</span><span>int</span><span>)</span>p<span>.</span><span>size</span><span>(</span><span>)</span><span>;</span>j<span>++</span><span>)</span><span>{</span>
+			rv<span>[</span>A<span>[</span>p<span>[</span>j<span>]</span><span>]</span><span>.</span>tot<span>]</span><span>[</span>i<span>]</span><span>=</span>A<span>[</span>p<span>[</span>j<span>]</span><span>]</span><span>.</span><span>querymax</span><span>(</span>s<span>[</span>i<span>]</span><span>)</span><span>;</span>
+			lp<span>[</span>A<span>[</span>p<span>[</span>j<span>]</span><span>]</span><span>.</span>tot<span>]</span><span>[</span>i<span>]</span><span>=</span><span>(</span>j<span>+</span><span>1</span><span>&lt;</span><span>(</span><span>int</span><span>)</span>p<span>.</span><span>size</span><span>(</span><span>)</span><span>?</span>p<span>[</span>j<span>+</span><span>1</span><span>]</span><span>+</span><span>1</span><span>:</span><span>1</span><span>)</span><span>;</span> rp<span>[</span>A<span>[</span>p<span>[</span>j<span>]</span><span>]</span><span>.</span>tot<span>]</span><span>[</span>i<span>]</span><span>=</span>p<span>[</span>j<span>]</span><span>;</span>
+		<span>}</span>
+	<span>}</span>
+	<span>int</span> ans<span>=</span><span>0</span><span>;</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span>m<span>-</span><span>1</span><span>;</span>i<span>>=</span><span>0</span><span>;</span>i<span>--</span><span>)</span><span>{</span>
+		<span>for</span> <span>(</span><span>int</span> j<span>=</span><span>0</span><span>;</span>j<span>&lt;=</span>m<span>;</span>j<span>++</span><span>)</span>
+			<span>for</span> <span>(</span><span>int</span> k<span>=</span><span>1</span><span>;</span>k<span>&lt;=</span>n<span>;</span>k<span>++</span><span>)</span>
+				v<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>=</span><span>(</span><span>(</span>v<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>&lt;&lt;</span><span>1</span><span>)</span><span>|</span><span>(</span>rv<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>>></span>i<span>&amp;</span><span>1</span><span>)</span><span>)</span><span>;</span>
+		ll tot<span>=</span><span>0</span><span>;</span>
+		<span>for</span> <span>(</span><span>int</span> j<span>=</span><span>0</span><span>;</span>j<span>&lt;=</span>m<span>;</span>j<span>++</span><span>)</span><span>{</span>
+			mp<span>.</span><span>clear</span><span>(</span><span>)</span><span>;</span> <span>int</span> l<span>=</span><span>1</span><span>,</span>r<span>=</span><span>0</span><span>;</span>
+			<span>for</span> <span>(</span><span>int</span> k<span>=</span><span>1</span><span>;</span>k<span>&lt;=</span>n<span>;</span>k<span>++</span><span>)</span><span>{</span>
+				<span>if</span> <span>(</span><span>!</span>lp<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>)</span> <span>continue</span><span>;</span>
+				<span>while</span> <span>(</span>l<span>&lt;</span>lp<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>)</span> mp<span>[</span>lv<span>[</span>j<span>]</span><span>[</span>l<span>++</span><span>]</span><span>>></span>i<span>]</span><span>--</span><span>;</span>
+				<span>while</span> <span>(</span>r<span>&lt;</span>rp<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>)</span> mp<span>[</span>lv<span>[</span>j<span>]</span><span>[</span><span>++</span>r<span>]</span><span>>></span>i<span>]</span><span>++</span><span>;</span>
+				tot<span>+=</span>mp<span>[</span>v<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>]</span><span>;</span>
+			<span>}</span>
+		<span>}</span>
+		<span>int</span> c<span>=</span><span>(</span>tot<span>&lt;</span>k<span>)</span><span>;</span> <span>if</span> <span>(</span>c<span>)</span> k<span>-=</span>tot<span>;</span>
+		<span>for</span> <span>(</span><span>int</span> j<span>=</span><span>0</span><span>;</span>j<span>&lt;=</span>m<span>;</span>j<span>++</span><span>)</span>
+			<span>for</span> <span>(</span><span>int</span> k<span>=</span><span>1</span><span>;</span>k<span>&lt;=</span>n<span>;</span>k<span>++</span><span>)</span>
+				v<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>^=</span>c<span>;</span>
+		ans<span>=</span><span>(</span>ans<span>&lt;&lt;</span><span>1</span><span>|</span>c<span>)</span><span>;</span>
+	<span>}</span>
+	<span>printf</span><span>(</span><span>"%d\n"</span><span>,</span>ans<span>)</span><span>;</span>
+	<span>return</span> <span>0</span><span>;</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><ul>
+<li>发现 TLE 了，因为直接这样子做常数非常大，因为求相同的数的数量时，$f/g$ 值可能很大，需要使用 $map/unordered_map$ 或 手写哈希表 等数据结构。</li>
+<li>怎么办呢，可以发现，这一位做完后，前几位再也不会修改了，所以可以将前几位重标号，这样就可以通过此题，时间复杂度 $O(nm^2)$。</li>
+</ul>
+<div><pre><code><span>//Accepted</span>
+<span><span>#</span><span>include</span><span>&lt;bits/stdc++.h></span></span>
+<span>using</span> <span>namespace</span> std<span>;</span>
+<span>typedef</span> <span>long</span> <span>long</span> ll<span>;</span>
+<span>const</span> <span>int</span> m<span>=</span><span>30</span><span>;</span>
+<span>int</span> n<span>,</span>c<span>[</span><span>110000</span><span>]</span><span>,</span>s<span>[</span><span>110000</span><span>]</span><span>,</span>mp<span>[</span><span>4100000</span><span>]</span><span>,</span>num<span>[</span><span>4100000</span><span>]</span><span>,</span>val<span>[</span><span>4100000</span><span>]</span><span>;</span> ll k<span>;</span>
+<span>int</span> lv<span>[</span><span>32</span><span>]</span><span>[</span><span>110000</span><span>]</span><span>,</span>rv<span>[</span><span>32</span><span>]</span><span>[</span><span>110000</span><span>]</span><span>,</span>lp<span>[</span><span>32</span><span>]</span><span>[</span><span>110000</span><span>]</span><span>,</span>rp<span>[</span><span>32</span><span>]</span><span>[</span><span>110000</span><span>]</span><span>,</span>u<span>[</span><span>32</span><span>]</span><span>[</span><span>110000</span><span>]</span><span>,</span>v<span>[</span><span>32</span><span>]</span><span>[</span><span>110000</span><span>]</span><span>;</span>
+<span>struct</span> <span>Basis</span><span>{</span>
+	<span>int</span> tot<span>,</span>v<span>[</span><span>32</span><span>]</span><span>;</span>
+	<span>Basis</span><span>(</span><span>)</span><span>{</span> tot<span>=</span><span>0</span><span>;</span> <span>memset</span><span>(</span>v<span>,</span><span>0</span><span>,</span><span>sizeof</span><span>(</span>v<span>)</span><span>)</span><span>;</span><span>}</span>
+	<span>bool</span> <span>ins</span><span>(</span><span>int</span> x<span>)</span><span>{</span>
+		<span>for</span> <span>(</span><span>int</span> i<span>=</span>m<span>-</span><span>1</span><span>;</span>i<span>>=</span><span>0</span><span>;</span>i<span>--</span><span>)</span>
+			<span>if</span> <span>(</span><span>(</span>x<span>>></span>i<span>)</span><span>&amp;</span><span>1</span><span>)</span> x<span>^=</span>v<span>[</span>i<span>]</span><span>;</span>
+		<span>for</span> <span>(</span><span>int</span> i<span>=</span>m<span>-</span><span>1</span><span>;</span>i<span>>=</span><span>0</span><span>;</span>i<span>--</span><span>)</span>
+			<span>if</span> <span>(</span><span>(</span>x<span>>></span>i<span>)</span><span>&amp;</span><span>1</span><span>)</span><span>{</span>
+				v<span>[</span>i<span>]</span><span>=</span>x<span>;</span> tot<span>++</span><span>;</span>
+				<span>for</span> <span>(</span><span>int</span> j<span>=</span>m<span>-</span><span>1</span><span>;</span>j<span>></span>i<span>;</span>j<span>--</span><span>)</span>
+					<span>if</span> <span>(</span><span>(</span>v<span>[</span>j<span>]</span><span>>></span>i<span>)</span><span>&amp;</span><span>1</span><span>)</span> v<span>[</span>j<span>]</span><span>^=</span>x<span>;</span>
+				<span>return</span> <span>true</span><span>;</span>
+			<span>}</span>
+		<span>return</span> <span>false</span><span>;</span>
+	<span>}</span>
+	<span>int</span> <span>querymax</span><span>(</span><span>int</span> x<span>)</span><span>{</span>
+		<span>for</span> <span>(</span><span>int</span> i<span>=</span>m<span>-</span><span>1</span><span>;</span>i<span>>=</span><span>0</span><span>;</span>i<span>--</span><span>)</span>
+			<span>if</span> <span>(</span><span>!</span><span>(</span><span>(</span>x<span>>></span>i<span>)</span><span>&amp;</span><span>1</span><span>)</span><span>)</span> x<span>^=</span>v<span>[</span>i<span>]</span><span>;</span>
+		<span>return</span> x<span>;</span>
+	<span>}</span>
+	<span>int</span> <span>querymin</span><span>(</span><span>int</span> x<span>)</span><span>{</span>
+		<span>for</span> <span>(</span><span>int</span> i<span>=</span>m<span>-</span><span>1</span><span>;</span>i<span>>=</span><span>0</span><span>;</span>i<span>--</span><span>)</span>
+			<span>if</span> <span>(</span><span>(</span>x<span>>></span>i<span>)</span><span>&amp;</span><span>1</span><span>)</span> x<span>^=</span>v<span>[</span>i<span>]</span><span>;</span>
+		<span>return</span> x<span>;</span>
+	<span>}</span>
+<span>}</span> A<span>[</span><span>110000</span><span>]</span><span>,</span>B<span>[</span><span>110000</span><span>]</span><span>;</span>
+vector<span>&lt;</span><span>int</span><span>></span> p<span>,</span>q<span>;</span>
+<span>void</span> <span>upd</span><span>(</span><span>int</span> i<span>)</span><span>{</span>
+	A<span>[</span>i<span>]</span><span>.</span><span>ins</span><span>(</span>c<span>[</span>i<span>]</span><span>)</span><span>;</span> <span>for</span> <span>(</span><span>int</span> x<span>:</span>p<span>)</span> A<span>[</span>x<span>]</span><span>.</span><span>ins</span><span>(</span>c<span>[</span>i<span>]</span><span>)</span><span>;</span>
+	q<span>=</span>p<span>;</span> p<span>.</span><span>clear</span><span>(</span><span>)</span><span>;</span> p<span>.</span><span>push_back</span><span>(</span>i<span>)</span><span>;</span>
+	<span>for</span> <span>(</span><span>int</span> x<span>:</span>q<span>)</span>
+		<span>if</span> <span>(</span>A<span>[</span>x<span>]</span><span>.</span>tot<span>></span>A<span>[</span>p<span>.</span><span>back</span><span>(</span><span>)</span><span>]</span><span>.</span>tot<span>)</span> p<span>.</span><span>push_back</span><span>(</span>x<span>)</span><span>;</span>
+<span>}</span>
+<span>int</span> <span>main</span><span>(</span><span>)</span><span>{</span>
+	<span>scanf</span><span>(</span><span>"%d%lld"</span><span>,</span><span>&amp;</span>n<span>,</span><span>&amp;</span>k<span>)</span><span>;</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>n<span>;</span>i<span>++</span><span>)</span> <span>scanf</span><span>(</span><span>"%d"</span><span>,</span><span>&amp;</span>s<span>[</span>i<span>]</span><span>)</span><span>;</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>n<span>;</span>i<span>++</span><span>)</span><span>{</span>
+		<span>scanf</span><span>(</span><span>"%d"</span><span>,</span><span>&amp;</span>c<span>[</span>i<span>]</span><span>)</span><span>;</span>
+		c<span>[</span>i<span>]</span><span>^=</span>s<span>[</span>i<span>]</span><span>;</span> s<span>[</span>i<span>]</span><span>^=</span>s<span>[</span>i<span>-</span><span>1</span><span>]</span><span>;</span>
+	<span>}</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span><span>1</span><span>;</span>i<span>&lt;=</span>n<span>;</span>i<span>++</span><span>)</span><span>{</span>
+		<span>for</span> <span>(</span><span>int</span> j<span>=</span>i<span>;</span>j<span>>=</span><span>1</span><span>&amp;&amp;</span><span>(</span>B<span>[</span>j<span>]</span><span>.</span><span>ins</span><span>(</span>c<span>[</span>i<span>]</span><span>)</span><span>||</span>i<span>==</span>j<span>)</span><span>;</span>j<span>--</span><span>)</span>
+			lv<span>[</span>B<span>[</span>j<span>]</span><span>.</span>tot<span>]</span><span>[</span>j<span>]</span><span>=</span>B<span>[</span>j<span>]</span><span>.</span><span>querymin</span><span>(</span>s<span>[</span>j<span>-</span><span>1</span><span>]</span><span>)</span><span>;</span>
+		<span>upd</span><span>(</span>i<span>)</span><span>;</span>
+		<span>for</span> <span>(</span><span>int</span> j<span>=</span><span>0</span><span>;</span>j<span>&lt;</span><span>(</span><span>int</span><span>)</span>p<span>.</span><span>size</span><span>(</span><span>)</span><span>;</span>j<span>++</span><span>)</span><span>{</span>
+			rv<span>[</span>A<span>[</span>p<span>[</span>j<span>]</span><span>]</span><span>.</span>tot<span>]</span><span>[</span>i<span>]</span><span>=</span>A<span>[</span>p<span>[</span>j<span>]</span><span>]</span><span>.</span><span>querymax</span><span>(</span>s<span>[</span>i<span>]</span><span>)</span><span>;</span>
+			lp<span>[</span>A<span>[</span>p<span>[</span>j<span>]</span><span>]</span><span>.</span>tot<span>]</span><span>[</span>i<span>]</span><span>=</span><span>(</span>j<span>+</span><span>1</span><span>&lt;</span><span>(</span><span>int</span><span>)</span>p<span>.</span><span>size</span><span>(</span><span>)</span><span>?</span>p<span>[</span>j<span>+</span><span>1</span><span>]</span><span>+</span><span>1</span><span>:</span><span>1</span><span>)</span><span>;</span> rp<span>[</span>A<span>[</span>p<span>[</span>j<span>]</span><span>]</span><span>.</span>tot<span>]</span><span>[</span>i<span>]</span><span>=</span>p<span>[</span>j<span>]</span><span>;</span>
+		<span>}</span>
+	<span>}</span>
+	<span>int</span> ans<span>=</span><span>0</span><span>;</span>
+	<span>for</span> <span>(</span><span>int</span> i<span>=</span>m<span>-</span><span>1</span><span>;</span>i<span>>=</span><span>0</span><span>;</span>i<span>--</span><span>)</span><span>{</span>
+		<span>for</span> <span>(</span><span>int</span> j<span>=</span><span>0</span><span>;</span>j<span>&lt;=</span>m<span>;</span>j<span>++</span><span>)</span>
+			<span>for</span> <span>(</span><span>int</span> k<span>=</span><span>1</span><span>;</span>k<span>&lt;=</span>n<span>;</span>k<span>++</span><span>)</span><span>{</span>
+				v<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>=</span><span>(</span><span>(</span>v<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>&lt;&lt;</span><span>1</span><span>)</span><span>|</span><span>(</span>rv<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>>></span>i<span>&amp;</span><span>1</span><span>)</span><span>)</span><span>;</span>
+				u<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>=</span><span>(</span><span>(</span>u<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>&lt;&lt;</span><span>1</span><span>)</span><span>|</span><span>(</span>lv<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>>></span>i<span>&amp;</span><span>1</span><span>)</span><span>)</span><span>;</span>
+			<span>}</span>
+		ll tot<span>=</span><span>0</span><span>;</span>
+		<span>for</span> <span>(</span><span>int</span> j<span>=</span><span>0</span><span>;</span>j<span>&lt;=</span>m<span>;</span>j<span>++</span><span>)</span><span>{</span>
+			<span>int</span> l<span>=</span><span>1</span><span>,</span>r<span>=</span><span>0</span><span>;</span>
+			<span>for</span> <span>(</span><span>int</span> k<span>=</span><span>1</span><span>;</span>k<span>&lt;=</span>n<span>;</span>k<span>++</span><span>)</span><span>{</span>
+				<span>if</span> <span>(</span><span>!</span>lp<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>)</span> <span>continue</span><span>;</span>
+				<span>while</span> <span>(</span>l<span>&lt;</span>lp<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>)</span> mp<span>[</span>u<span>[</span>j<span>]</span><span>[</span>l<span>++</span><span>]</span><span>]</span><span>--</span><span>;</span>
+				<span>while</span> <span>(</span>r<span>&lt;</span>rp<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>)</span> mp<span>[</span>u<span>[</span>j<span>]</span><span>[</span><span>++</span>r<span>]</span><span>]</span><span>++</span><span>;</span>
+				tot<span>+=</span>mp<span>[</span>v<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>]</span><span>;</span>
+			<span>}</span>
+			<span>for</span> <span>(</span><span>int</span> k<span>=</span>l<span>;</span>k<span>&lt;=</span>r<span>;</span>k<span>++</span><span>)</span> mp<span>[</span>u<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>]</span><span>=</span><span>0</span><span>;</span>
+		<span>}</span>
+		<span>int</span> c<span>=</span><span>(</span>tot<span>&lt;</span>k<span>)</span><span>;</span> <span>if</span> <span>(</span>c<span>)</span> k<span>-=</span>tot<span>;</span>
+		
+		<span>int</span> now<span>=</span><span>0</span><span>;</span>
+		<span>for</span> <span>(</span><span>int</span> j<span>=</span><span>0</span><span>;</span>j<span>&lt;=</span>m<span>;</span>j<span>++</span><span>)</span>
+			<span>for</span> <span>(</span><span>int</span> k<span>=</span><span>1</span><span>;</span>k<span>&lt;=</span>n<span>;</span>k<span>++</span><span>)</span><span>{</span>
+				v<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>^=</span>c<span>;</span>
+				<span>if</span> <span>(</span><span>!</span>num<span>[</span>v<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>]</span><span>)</span> now<span>++</span><span>,</span>num<span>[</span>v<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>]</span><span>=</span>now<span>,</span>val<span>[</span>now<span>]</span><span>=</span>v<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>;</span>
+				v<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>=</span>num<span>[</span>v<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>]</span><span>;</span>
+			<span>}</span>
+		<span>for</span> <span>(</span><span>int</span> j<span>=</span><span>0</span><span>;</span>j<span>&lt;=</span>m<span>;</span>j<span>++</span><span>)</span>
+			<span>for</span> <span>(</span><span>int</span> k<span>=</span><span>1</span><span>;</span>k<span>&lt;=</span>n<span>;</span>k<span>++</span><span>)</span>
+				<span>if</span> <span>(</span>num<span>[</span>u<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>]</span><span>)</span> u<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>=</span>num<span>[</span>u<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>]</span><span>;</span>
+				<span>else</span> u<span>[</span>j<span>]</span><span>[</span>k<span>]</span><span>=</span><span>0</span><span>;</span>
+		<span>while</span> <span>(</span>now<span>)</span> num<span>[</span>val<span>[</span>now<span>--</span><span>]</span><span>]</span><span>=</span><span>0</span><span>;</span>
+		ans<span>=</span><span>(</span>ans<span>&lt;&lt;</span><span>1</span><span>|</span>c<span>)</span><span>;</span>
+	<span>}</span>
+	<span>printf</span><span>(</span><span>"%d\n"</span><span>,</span>ans<span>)</span><span>;</span>
+	<span>return</span> <span>0</span><span>;</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>]]></content:encoded>
     </item>
   </channel>
 </rss>
